@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-07 11:40:22
+/* Smarty version 3.1.48, created on 2024-11-07 13:58:06
   from '/var/www/html/admin123/themes/new-theme/template/components/layout/non-responsive.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_672c9916ad9d28_51785939',
+  'unifunc' => 'content_672cb95e4d95e1_63420076',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8626d8d108a552e7c23fb7e23f0da308e3ce7c81' => 
     array (
       0 => '/var/www/html/admin123/themes/new-theme/template/components/layout/non-responsive.tpl',
-      1 => 1702485415,
+      1 => 1730979359,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_672c9916ad9d28_51785939 (Smarty_Internal_Template $_smarty_tpl) {
+function content_672cb95e4d95e1_63420076 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="non-responsive" class="js-non-responsive">
   <h1><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Oh no!'),$_smarty_tpl ) );?>
 </h1>

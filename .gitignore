@@ -1,4 +1,16 @@
-/var/cache/
-/var/logs/
-/tmp/
+*.log
+*.pid
+*.swp
+*.bak
+*.tmp
+*.gz
 
+kody-zrodlowe-strony/my-prestashop/var/cache/
+kody-zrodlowe-strony/my-prestashop/var/logs/
+kody-zrodlowe-strony/my-prestashop/var/sessions/
+kody-zrodlowe-strony/my-prestashop/var/smarty/
+kody-zrodlowe-strony/my-prestashop/vendor/
+kody-zrodlowe-strony/my-prestashop/.env
+kody-zrodlowe-strony/my-prestashop/.env.local
+kody-zrodlowe-strony/my-prestashop/.env.prod
+kody-zrodlowe-strony/my-prestashop/.env.test
