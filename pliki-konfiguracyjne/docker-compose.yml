@@ -4,7 +4,7 @@ services:
     container_name: some-mysql
     image: mysql:5.7
     volumes:
-      - ../pliki-zrodlowe-sklepu/mysql-data:/var/lib/mysql
+      - ../kody-zrodlowe-sklepu/mysql-data:/var/lib/mysql
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: admin
@@ -20,7 +20,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ../pliki-zrodlowe-sklepu/my-prestashop:/var/www/html
+      - ../kody-zrodlowe-sklepu/my-prestashop:/var/www/html
     environment:
       DB_SERVER: some-mysql
       DB_NAME: prestashop
