@@ -13,14 +13,21 @@ services:
       - prestashop_network
   prestashop:
     container_name: prestashop
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: prestashop/prestashop:1.7.8
     restart: unless-stopped
     depends_on:
       - mysql
     ports:
       - 8080:80
+      #- 8443:443
     volumes:
       - ../kody-zrodlowe-sklepu/my-prestashop:/var/www/html
+      #- ./000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+      #- ./certs/ssl_certificate.crt:/etc/ssl/certs/ssl_certificate.crt
+      #- ./certs/ssl_certificate_secret.key:/etc/ssl/private/ssl_certificate_secret.key
     environment:
       DB_SERVER: some-mysql
       DB_NAME: prestashop
