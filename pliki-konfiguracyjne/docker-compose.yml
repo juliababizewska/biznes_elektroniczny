@@ -50,6 +50,20 @@ services:
       MYSQL_ROOT_PASSWORD: admin
     networks:
       - prestashop_network
+  smtp:
+    image: namshi/smtp
+    container_name: smtp-server
+    networks:
+      - prestashop_network
+    ports:
+      - "25:25"
+      - "587:587"
+    environment:
+      - MAILDOMAIN=localhost
+      - SMTPUSER=root:admin
+    hostname: smtp.local
+    extra_hosts:
+      - "localhost:172.20.0.1"
 networks:
   prestashop_network:
 volumes:
