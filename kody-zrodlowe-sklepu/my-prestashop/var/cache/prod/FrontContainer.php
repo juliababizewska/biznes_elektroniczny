@@ -5521,6 +5521,8 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
                 60 => 'ps_facetedsearch',
                 61 => 'ps_accounts',
                 62 => 'ps_eventbus',
+                63 => 'klarnapayment',
+                64 => 'paypal',
             ],
             'ps_cache_dir' => '/var/www/html/var/cache/prod/',
             'mail_themes_uri' => '/mails/themes',
