@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-15 13:48:21
+/* Smarty version 3.1.48, created on 2024-11-18 18:12:37
   from '/var/www/html/admin123/themes/default/template/controllers/modules/modal_not_trusted.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_673743158e7f28_30335612',
+  'unifunc' => 'content_673b75857e3565_78922802',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0dbf25b109f4862682ed8444bffbcf17186c6e28' => 
     array (
       0 => '/var/www/html/admin123/themes/default/template/controllers/modules/modal_not_trusted.tpl',
-      1 => 1730986580,
+      1 => 1730979359,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673743158e7f28_30335612 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673b75857e3565_78922802 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="untrusted-content-action">
 
