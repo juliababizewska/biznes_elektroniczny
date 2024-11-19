@@ -17,6 +17,7 @@
     'ps_cache_enable' => false,
     'ps_creation_date' => '2024-11-05',
     'locale' => 'en-US',
+    'smtp_ssl_verify_peer' => false,
     'use_debug_toolbar' => true,
     'cookie_key' => 'hZV1vgPg4rEFGTPS4hPgc4Bhqbrwxf7qJmbub1mSbqJvGpZgSXRVHkXBk9zTt2eY',
     'cookie_iv' => '29i2JTSBycN8A66Rabv0m2j3C0c6Zc9b',

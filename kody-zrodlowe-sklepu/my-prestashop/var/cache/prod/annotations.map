@@ -216,9 +216,4 @@
   216 => 'PrestaShop\\Module\\PsAccounts\\Entity\\EmployeeAccount',
   217 => 'PrestaShop\\Module\\PsAccounts\\Polyfill\\Traits\\Controller\\AjaxRender',
   218 => 'PrestaShop\\Module\\PsEventbus\\Controller\\AbstractApiController',
-  219 => 'KlarnaPayment\\Module\\Infrastructure\\Controller\\AbstractAdminController',
-  220 => 'KlarnaPayment\\Module\\Infrastructure\\Controller\\AbstractFrontController',
-  221 => 'KlarnaPayment\\Module\\Presentation\\Controller\\Front\\AuthenticationController',
-  222 => 'KlarnaPayment\\Module\\Presentation\\Controller\\Front\\CheckoutController',
-  223 => 'KlarnaPayment\\Module\\Presentation\\Controller\\Front\\GetOrderDetailsController',
 );
