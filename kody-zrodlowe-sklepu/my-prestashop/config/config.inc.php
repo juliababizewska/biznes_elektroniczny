@@ -39,6 +39,8 @@ require_once _PS_CONFIG_DIR_ . 'autoload.php';
 
 $start_time = microtime(true);
 
+
+
 /* SSL configuration */
 define('_PS_SSL_PORT_', 443);
 

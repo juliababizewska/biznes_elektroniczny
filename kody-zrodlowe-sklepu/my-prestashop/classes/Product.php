@@ -24,6 +24,8 @@
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
+
+
 // Deprecated since 1.5.0.1 use Product::CUSTOMIZE_FILE
 define('_CUSTOMIZE_FILE_', 0);
 
