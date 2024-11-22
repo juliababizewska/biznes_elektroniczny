@@ -22,66 +22,50 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-{block name='header_banner'}
-  <div class="header-banner">
-    {hook h='displayBanner'}
-  </div>
-{/block}
-
-{block name='header_nav'}
-  <nav class="header-nav">
-    <div class="container">
-      <div class="row">
-        <div class="hidden-sm-down">
-          <div class="col-md-5 col-xs-12">
-            {hook h='displayNav1'}
-          </div>
-          <div class="col-md-7 right-nav">
-              {hook h='displayNav2'}
-          </div>
-        </div>
-        <div class="hidden-md-up text-sm-center mobile">
-          <div class="float-xs-left" id="menu-icon">
-            <i class="material-icons d-inline">&#xE5D2;</i>
-          </div>
-          <div class="float-xs-right" id="_mobile_cart"></div>
-          <div class="float-xs-right" id="_mobile_user_info"></div>
-          <div class="top-logo" id="_mobile_logo"></div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
+<header class="custom-header">
+  <div class="header-container">
+    <!-- Zdjęcie logo -->
+    <div class="header-logo">
+      <img src="{$urls.base_url}themes/classic/assets/img/logo.jpeg" alt="Logo" class="logo-image">
     </div>
-  </nav>
-{/block}
 
-{block name='header_top'}
-  <div class="header-top">
-    <div class="container">
-       <div class="row">
-        <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
-          {if $shop.logo_details}
-            {if $page.page_name == 'index'}
-              <h1>
-                {renderLogo}
-              </h1>
-            {else}
-              {renderLogo}
-            {/if}
-          {/if}
-        </div>
-        <div class="header-top-right col-md-10 col-sm-12 position-static">
-          {hook h='displayTop'}
-        </div>
+    <!-- Elementy obok logo -->
+    <div class="header-content">
+      <!-- Wyszukiwarka -->
+      <div class="search-box">
+        <input type="text" class="search-input" placeholder="Wpisz czego szukasz.">
+        <button type="submit" class="search-btn">
+          <i class="material-icons">search</i>
+        </button>
       </div>
-      <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
-        <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
-        <div class="js-top-menu-bottom">
-          <div id="_mobile_currency_selector"></div>
-          <div id="_mobile_language_selector"></div>
-          <div id="_mobile_contact_link"></div>
-        </div>
+
+
+
+    
+
+      <!-- Moje konto -->
+      <div class="header-item">
+        <a href="{$urls.pages.my_account}">
+          <span>Moje konto</span>
+          <i class="material-icons">person</i>
+        </a>
+      </div>
+
+      <!-- Koszyk -->
+      <div class="header-item">
+        <a href="{$urls.pages.cart}">
+          <span>Koszyk</span>
+          <i class="material-icons">shopping_cart</i>
+        </a>
+      </div>
+
+      <!-- Język i waluta -->
+      <div class="header-item">
+        <a href="#">
+          <span>Język i waluta</span>
+          <i class="material-icons">flag</i>
+        </a>
       </div>
     </div>
   </div>
-  {hook h='displayNavFullWidth'}
-{/block}
+</header>

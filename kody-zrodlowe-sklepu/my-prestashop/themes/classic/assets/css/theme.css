@@ -64,6 +64,157 @@ body, html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased; }
+
+  /* Główne ustawienia nagłówka */
+.custom-header {
+  display: flex;
+  justify-content: flex-start; /* Wyrównanie do lewej */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Kontener nagłówka */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Odstęp między elementami */
+}
+
+/* Logo */
+.header-logo {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.logo-image {
+  max-height: 100px; /* Nieco mniejsze logo */
+  width: auto;
+}
+
+/* Elementy obok logo */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Odstęp między elementami */
+}
+
+/* Styl dla każdego elementu - boxy */
+.header-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  width: 160px; /* Mniejsze boxy */
+  height: 40px;
+  padding: 0 10px; /* Odstępy wewnętrzne */
+  transition: background-color 0.3s ease;
+}
+
+/* Zmiana tła boxa na żółty po najechaniu */
+.header-item:hover {
+  background-color: #fcb827;
+  cursor: pointer;
+}
+
+/* Ikony za napisem */
+.header-item i {
+  margin-left: 8px;
+  font-size: 18px;
+  color: black;
+}
+/* Główne ustawienia boxa wyszukiwania */
+.search-box {
+  display: flex; /* Ustawienie elementów w jednej linii */
+  align-items: center; /* Wyrównanie w pionie */
+  border: 1px solid #ccc; /* Obramowanie */
+  border-radius: 5px; /* Zaokrąglenie rogów */
+  width: 300px; /* Szerokość boxa */
+  height: 40px; /* Wysokość boxa */
+  overflow: hidden; /* Ukrycie nadmiaru treści */
+  box-sizing: border-box; /* Uwzględnienie paddingu w wymiarach */
+}
+
+/* Pole tekstowe wyszukiwarki */
+.search-input {
+  flex: 1; /* Wypełnia dostępną przestrzeń */
+  border: none; /* Bez obramowania */
+  padding: 10px; /* Odstępy wewnętrzne */
+  font-size: 14px; /* Rozmiar czcionki */
+  outline: none; /* Usunięcie domyślnego efektu focus */
+  box-sizing: border-box; /* Uwzględnienie paddingu */
+  height: 100%; /* Dopasowanie do wysokości boxa */
+}
+
+/* Przycisk z lupką */
+.search-btn {
+  background-color: #fcb827; /* Żółty kolor przycisku */
+  border: none; /* Bez obramowania */
+  padding: 0 15px; /* Odstępy wewnętrzne po bokach */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  display: flex; /* Wyśrodkowanie zawartości */
+  align-items: center; /* Wyśrodkowanie w pionie */
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  height: 100%; /* Dopasowanie do wysokości boxa */
+  border-top-right-radius: 5px; /* Zaokrąglenie prawego górnego rogu */
+  border-bottom-right-radius: 5px; /* Zaokrąglenie prawego dolnego rogu */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru */
+}
+
+/* Ikona w przycisku */
+.search-btn i {
+  font-size: 18px; /* Rozmiar ikony */
+  color: black; /* Kolor ikony */
+}
+
+/* Efekt hover dla przycisku */
+.search-btn:hover {
+  background-color: red; /* Zmiana tła na czerwone */
+}
+
+
+
+/* Styl dla innych boxów */
+.header-item {
+  display: flex;
+  align-items: center; /* Wyśrodkowanie elementów w pionie */
+  justify-content: space-between; /* Rozmieszczenie tekstu i ikony */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  width: 160px; /* Boxy są węższe niż wyszukiwarka */
+  height: 40px; /* Ustalona wysokość */
+  padding: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.header-item:hover {
+  background-color: #fcb827; /* Tło zmienia się na żółte po najechaniu */
+}
+
+/* Napisy nie zmieniają koloru */
+.header-item span {
+  color: black;
+  transition: none;
+}
+
+/* Ikony za tekstem */
+.header-item i {
+  margin-left: 5px; /* Odstęp między tekstem a ikoną */
+  font-size: 18px;
+  color: black;
+}
+
+
 /*!
  * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
