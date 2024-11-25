@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-22 23:57:50
+/* Smarty version 3.1.48, created on 2024-11-25 01:53:31
   from '/var/www/html/themes/classic/templates/catalog/_partials/variant-links.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67410c6eebcc90_40666532',
+  'unifunc' => 'content_6743ca8b3d56d0_63455631',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67410c6eebcc90_40666532 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '82713313367410c6eeb9c78_97762388';
+function content_6743ca8b3d56d0_63455631 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '4728788926743ca8b3d2e19_52519748';
 ?>
 <div class="variant-links">
   <?php

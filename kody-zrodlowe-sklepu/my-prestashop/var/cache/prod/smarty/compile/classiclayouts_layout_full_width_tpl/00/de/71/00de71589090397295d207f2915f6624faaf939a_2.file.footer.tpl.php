@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-22 23:57:51
+/* Smarty version 3.1.48, created on 2024-11-25 01:53:31
   from '/var/www/html/themes/classic/templates/_partials/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67410c6f0b8b81_16949903',
+  'unifunc' => 'content_6743ca8b541971_70957332',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '00de71589090397295d207f2915f6624faaf939a' => 
     array (
       0 => '/var/www/html/themes/classic/templates/_partials/footer.tpl',
-      1 => 1732312930,
+      1 => 1732495968,
       2 => 'file',
     ),
   ),
@@ -20,117 +20,46 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67410c6f0b8b81_16949903 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_loadInheritance();
-$_smarty_tpl->inheritance->init($_smarty_tpl, false);
-?>
-<div class="container">
-  <div class="row">
-    <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_204056769467410c6f0b6640_75641353', 'hook_footer_before');
-?>
-
+function content_6743ca8b541971_70957332 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="newsletter-section-wrapper">
+  <!-- Tło całej sekcji -->
+  <div class="newsletter-section">
+    <!-- Niebieski box -->
+    <div class="newsletter-content">
+      <div class="newsletter-text">
+        <h2>Dołącz do naszego klubu.</h2>
+        <p>Dołącz do naszego klubu i otrzymuj ciekawe informacje, promocje i rabaty.</p>
+      </div>
+      <form class="newsletter-form" action="#">
+        <input type="email" placeholder="Twój email..." required>
+        <button type="submit" class="newsletter-btn">Dodaj</button>
+      </form>
+    </div>
   </div>
-</div>
-<div class="footer-container">
-  <div class="container">
-    <div class="row">
-      <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_62164323467410c6f0b6cd4_31358796', 'hook_footer');
-?>
-
-    </div>
-    <div class="row">
-      <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_197468060867410c6f0b7231_02445965', 'hook_footer_after');
-?>
-
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="text-sm-center">
-          <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_188058259967410c6f0b7735_40744881', 'copyright_link');
-?>
-
-        </p>
+  <!-- Stopka -->
+  <footer class="footer-container">
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>O nas</h3>
+        <ul>
+          <li><a href="#">Informacje</a></li>
+          <li><a href="#">Regulamin</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Pomoc</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Wysyłka</a></li>
+          <li><a href="#">Reklamacje</a></li>
+        </ul>
       </div>
     </div>
-  </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Twoja Firma. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
 </div>
 <?php }
-/* {block 'hook_footer_before'} */
-class Block_204056769467410c6f0b6640_75641353 extends Smarty_Internal_Block
-{
-public $subBlocks = array (
-  'hook_footer_before' => 
-  array (
-    0 => 'Block_204056769467410c6f0b6640_75641353',
-  ),
-);
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
-      <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayFooterBefore'),$_smarty_tpl ) );?>
-
-    <?php
-}
-}
-/* {/block 'hook_footer_before'} */
-/* {block 'hook_footer'} */
-class Block_62164323467410c6f0b6cd4_31358796 extends Smarty_Internal_Block
-{
-public $subBlocks = array (
-  'hook_footer' => 
-  array (
-    0 => 'Block_62164323467410c6f0b6cd4_31358796',
-  ),
-);
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
-        <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayFooter'),$_smarty_tpl ) );?>
-
-      <?php
-}
-}
-/* {/block 'hook_footer'} */
-/* {block 'hook_footer_after'} */
-class Block_197468060867410c6f0b7231_02445965 extends Smarty_Internal_Block
-{
-public $subBlocks = array (
-  'hook_footer_after' => 
-  array (
-    0 => 'Block_197468060867410c6f0b7231_02445965',
-  ),
-);
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
-        <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayFooterAfter'),$_smarty_tpl ) );?>
-
-      <?php
-}
-}
-/* {/block 'hook_footer_after'} */
-/* {block 'copyright_link'} */
-class Block_188058259967410c6f0b7735_40744881 extends Smarty_Internal_Block
-{
-public $subBlocks = array (
-  'copyright_link' => 
-  array (
-    0 => 'Block_188058259967410c6f0b7735_40744881',
-  ),
-);
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
-
-            <a href="https://www.prestashop.com" target="_blank" rel="noopener noreferrer nofollow">
-              <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'%copyright% %year% - Ecommerce software by %prestashop%','sprintf'=>array('%prestashop%'=>'PrestaShop™','%year%'=>date('Y'),'%copyright%'=>'©'),'d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
-
-            </a>
-          <?php
-}
-}
-/* {/block 'copyright_link'} */
 }

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-23 00:00:56
+/* Smarty version 3.1.48, created on 2024-11-25 11:15:02
   from '/var/www/html/modules/ps_themecusto/views/templates/admin/controllers/configuration/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67410d283b3730_02214997',
+  'unifunc' => 'content_67444e26cd88d2_46536191',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./elem/modal.tpl' => 1,
   ),
 ),false)) {
-function content_67410d283b3730_02214997 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67444e26cd88d2_46536191 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="psthemecusto" class="container-fluid clearfix">
     <div class="panel row">
