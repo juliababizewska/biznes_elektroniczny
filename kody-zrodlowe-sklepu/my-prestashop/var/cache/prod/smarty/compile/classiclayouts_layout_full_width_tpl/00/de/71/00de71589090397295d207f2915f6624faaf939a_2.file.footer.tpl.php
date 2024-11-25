@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-25 01:53:31
+/* Smarty version 3.1.48, created on 2024-11-25 13:36:08
   from '/var/www/html/themes/classic/templates/_partials/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6743ca8b541971_70957332',
+  'unifunc' => 'content_67446f38ea1096_51154256',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '00de71589090397295d207f2915f6624faaf939a' => 
     array (
       0 => '/var/www/html/themes/classic/templates/_partials/footer.tpl',
-      1 => 1732495968,
+      1 => 1732537889,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6743ca8b541971_70957332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67446f38ea1096_51154256 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="newsletter-section-wrapper">
   <!-- Tło całej sekcji -->
   <div class="newsletter-section">

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-25 13:20:13
+/* Smarty version 3.1.48, created on 2024-11-25 13:36:51
   from '/var/www/html/themes/classic/templates/_partials/form-errors.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67446b7d9dbdd0_86121952',
+  'unifunc' => 'content_67446f63d35ba1_81460243',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,25 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67446b7d9dbdd0_86121952 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67446f63d35ba1_81460243 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 if (count($_smarty_tpl->tpl_vars['errors']->value)) {?>
   <div class="help-block">
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_118468075267446b7d9da8e1_77966054', 'form_errors');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_44052306467446f63d34068_98955368', 'form_errors');
 ?>
 
   </div>
 <?php }
 }
 /* {block 'form_errors'} */
-class Block_118468075267446b7d9da8e1_77966054 extends Smarty_Internal_Block
+class Block_44052306467446f63d34068_98955368 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'form_errors' => 
   array (
-    0 => 'Block_118468075267446b7d9da8e1_77966054',
+    0 => 'Block_44052306467446f63d34068_98955368',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
