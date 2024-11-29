@@ -113,7 +113,7 @@ class __TwigTemplate_63e103fb653709cd0edcc6aea55af4056e084c3559247ca84c7f4f2fe62
       <div class=\"col\">
         ";
         // line 40
-        $this->loadTemplate("@PrestaShop/Admin/Sell/Catalog/Monitoring/index.html.twig", "@PrestaShop/Admin/Sell/Catalog/Monitoring/index.html.twig", 40, "1564937411")->display(twig_array_merge($context, ["grid" => ($context["emptyCategoryGrid"] ?? null)]));
+        $this->loadTemplate("@PrestaShop/Admin/Sell/Catalog/Monitoring/index.html.twig", "@PrestaShop/Admin/Sell/Catalog/Monitoring/index.html.twig", 40, "1422949078")->display(twig_array_merge($context, ["grid" => ($context["emptyCategoryGrid"] ?? null)]));
         // line 61
         echo "      </div>
     </div>
@@ -260,7 +260,7 @@ class __TwigTemplate_63e103fb653709cd0edcc6aea55af4056e084c3559247ca84c7f4f2fe62
 
 
 /* @PrestaShop/Admin/Sell/Catalog/Monitoring/index.html.twig */
-class __TwigTemplate_63e103fb653709cd0edcc6aea55af4056e084c3559247ca84c7f4f2fe628f55f___1564937411 extends \Twig\Template
+class __TwigTemplate_63e103fb653709cd0edcc6aea55af4056e084c3559247ca84c7f4f2fe628f55f___1422949078 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
