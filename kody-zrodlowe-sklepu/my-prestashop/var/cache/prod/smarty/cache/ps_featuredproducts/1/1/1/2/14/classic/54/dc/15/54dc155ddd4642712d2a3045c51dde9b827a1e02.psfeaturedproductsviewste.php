@@ -1,50 +1,42 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-29 19:03:53
+/* Smarty version 3.1.48, created on 2024-11-29 21:56:34
   from 'module:psfeaturedproductsviewste' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674a0209915e32_31972918',
+  'unifunc' => 'content_674a2a82103313_99330401',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fa6cc378d2942c8857b89d6bca728048c0caeedd' => 
     array (
       0 => 'module:psfeaturedproductsviewste',
-      1 => 1732899941,
+      1 => 1732312930,
       2 => 'module',
     ),
     '86a4d354f725902b1405db749b93834da03807f6' => 
     array (
       0 => '/var/www/html/themes/classic/templates/catalog/_partials/productlist.tpl',
-      1 => 1732899941,
+      1 => 1732312930,
       2 => 'file',
     ),
     '4e48f9081812442e5797c9033049dad3e79d82e7' => 
     array (
       0 => '/var/www/html/themes/classic/templates/catalog/_partials/miniatures/product.tpl',
-      1 => 1732899941,
+      1 => 1732312930,
       2 => 'file',
     ),
     '0724df70e9113f9ffcf0299fe2d091b4d46089e2' => 
     array (
       0 => '/var/www/html/themes/classic/templates/catalog/_partials/product-flags.tpl',
-      1 => 1732899941,
+      1 => 1732312930,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_674a0209915e32_31972918 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
-  'renderLogo' => 
-  array (
-    'compiled_filepath' => '/var/www/html/var/cache/prod/smarty/compile/classiclayouts_layout_full_width_tpl/d2/2d/85/d22d851f6d7c12eb35c1c34c8e84baa801a8cea2_2.file.helpers.tpl.php',
-    'uid' => 'd22d851f6d7c12eb35c1c34c8e84baa801a8cea2',
-    'call_name' => 'smarty_template_function_renderLogo_1930817494674a0072d9c253_62937376',
-  ),
-));
+function content_674a2a82103313_99330401 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="featured-products clearfix">
   <h2 class="h2 products-section-title text-uppercase">
     Popularne produkty
@@ -84,7 +76,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
       <div class="product-description">
         
-                      <h2 class="h3 product-title"><a href="https://localhost:8080/pl/angora-i-mieszanki/1000-angora-100-01.html" content="https://localhost:8080/pl/angora-i-mieszanki/1000-angora-100-01.html">Angora 100% 01</a></h2>
+                      <h3 class="h3 product-title"><a href="https://localhost:8080/pl/angora-i-mieszanki/1000-angora-100-01.html" content="https://localhost:8080/pl/angora-i-mieszanki/1000-angora-100-01.html">Angora 100% 01</a></h3>
                   
 
         
@@ -153,7 +145,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
       <div class="product-description">
         
-                      <h2 class="h3 product-title"><a href="https://localhost:8080/pl/juta-sizal/1012-rafia-kremowa-57.html" content="https://localhost:8080/pl/juta-sizal/1012-rafia-kremowa-57.html">Rafia kremowa 57</a></h2>
+                      <h3 class="h3 product-title"><a href="https://localhost:8080/pl/juta-sizal/1012-rafia-kremowa-57.html" content="https://localhost:8080/pl/juta-sizal/1012-rafia-kremowa-57.html">Rafia kremowa 57</a></h3>
                   
 
         
@@ -222,7 +214,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
       <div class="product-description">
         
-                      <h2 class="h3 product-title"><a href="https://localhost:8080/pl/wloczki-super-grube/1022-country-55.html" content="https://localhost:8080/pl/wloczki-super-grube/1022-country-55.html">Country 55</a></h2>
+                      <h3 class="h3 product-title"><a href="https://localhost:8080/pl/wloczki-super-grube/1022-country-55.html" content="https://localhost:8080/pl/wloczki-super-grube/1022-country-55.html">Country 55</a></h3>
                   
 
         
@@ -291,7 +283,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
       <div class="product-description">
         
-                      <h2 class="h3 product-title"><a href="https://localhost:8080/pl/merynosy/1043-baby-supremo-119.html" content="https://localhost:8080/pl/merynosy/1043-baby-supremo-119.html">Baby Supremo 119</a></h2>
+                      <h3 class="h3 product-title"><a href="https://localhost:8080/pl/merynosy/1043-baby-supremo-119.html" content="https://localhost:8080/pl/merynosy/1043-baby-supremo-119.html">Baby Supremo 119</a></h3>
                   
 
         
@@ -360,7 +352,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
       <div class="product-description">
         
-                      <h2 class="h3 product-title"><a href="https://localhost:8080/pl/bawelna-organiczna/1076-bio-balance--29.html" content="https://localhost:8080/pl/bawelna-organiczna/1076-bio-balance--29.html">Bio Balance  29</a></h2>
+                      <h3 class="h3 product-title"><a href="https://localhost:8080/pl/bawelna-organiczna/1076-bio-balance--29.html" content="https://localhost:8080/pl/bawelna-organiczna/1076-bio-balance--29.html">Bio Balance  29</a></h3>
                   
 
         
@@ -429,7 +421,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
       <div class="product-description">
         
-                      <h2 class="h3 product-title"><a href="https://localhost:8080/pl/na-maskotki/1079-big-alabama-1.html" content="https://localhost:8080/pl/na-maskotki/1079-big-alabama-1.html">Big Alabama 1</a></h2>
+                      <h3 class="h3 product-title"><a href="https://localhost:8080/pl/na-maskotki/1079-big-alabama-1.html" content="https://localhost:8080/pl/na-maskotki/1079-big-alabama-1.html">Big Alabama 1</a></h3>
                   
 
         
@@ -498,7 +490,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
       <div class="product-description">
         
-                      <h2 class="h3 product-title"><a href="https://localhost:8080/pl/na-maskotki/1087-chenille--005.html" content="https://localhost:8080/pl/na-maskotki/1087-chenille--005.html">Chenille  005</a></h2>
+                      <h3 class="h3 product-title"><a href="https://localhost:8080/pl/na-maskotki/1087-chenille--005.html" content="https://localhost:8080/pl/na-maskotki/1087-chenille--005.html">Chenille  005</a></h3>
                   
 
         
@@ -567,7 +559,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
       <div class="product-description">
         
-                      <h2 class="h3 product-title"><a href="https://localhost:8080/pl/macrame-cotton-2mm/1180-macrame-cotton--2mm-771.html" content="https://localhost:8080/pl/macrame-cotton-2mm/1180-macrame-cotton--2mm-771.html">Macrame Cotton  2mm 771</a></h2>
+                      <h3 class="h3 product-title"><a href="https://localhost:8080/pl/macrame-cotton-2mm/1180-macrame-cotton--2mm-771.html" content="https://localhost:8080/pl/macrame-cotton-2mm/1180-macrame-cotton--2mm-771.html">Macrame Cotton  2mm 771</a></h3>
                   
 
         

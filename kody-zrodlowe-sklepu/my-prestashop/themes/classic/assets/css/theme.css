@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  *  Bootstrap TouchSpin - v3.1.1
  *  A mobile and touch friendly input spinner component for Bootstrap 3.
@@ -7,63 +8,699 @@
  *  Under Apache License v2.0 License
  */
 
-.bootstrap-touchspin .input-group-btn-vertical{position:relative;white-space:nowrap;width:1%;vertical-align:middle;display:table-cell}.bootstrap-touchspin .input-group-btn-vertical>.btn{display:block;float:none;width:100%;max-width:100%;padding:8px 10px;margin-left:-1px;position:relative}.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up{border-radius:0;border-top-right-radius:4px}.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down{margin-top:-2px;border-radius:0;border-bottom-right-radius:4px}.bootstrap-touchspin .input-group-btn-vertical i{position:absolute;top:3px;left:5px;font-size:9px;font-weight:400}
-@charset "UTF-8";
+.bootstrap-touchspin .input-group-btn-vertical {
+  position: relative;
+  white-space: nowrap;
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 10px;
+  margin-left: -1px;
+  position: relative;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up {
+  border-radius: 0;
+  border-top-right-radius: 4px;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
+  margin-top: -2px;
+  border-radius: 0;
+  border-bottom-right-radius: 4px;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical i {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  font-size: 9px;
+  font-weight: 400;
+}
+
 @font-face {
   font-family: "Manrope";
   src: url(../css/895e092292d88717adaa347e532822ab.woff2) format("woff2"), /* Modern browsers */
-  url(../css/83131b9daba3e9a7b2c7ae7e47d2d503.woff) format("woff"), /* Legacy browsers */
-  url(../css/057cc3c927dc0b2e8dbb739a306bd3a3.otf) format("truetype"); /* Android, iOS */
+       url(../css/83131b9daba3e9a7b2c7ae7e47d2d503.woff) format("woff"),    /* Legacy browsers */
+       url(../css/057cc3c927dc0b2e8dbb739a306bd3a3.otf) format("truetype"); /* Android, iOS */
   font-style: normal;
-  font-weight: 800; }
-@font-face {
-  font-family: "Manrope";
-  src: url(../css/dce0916af972e3040aa191f74b17dd46.woff2) format("woff2"),
-  url(../css/de69cd9e672c81725abcde04ecf022ee.woff) format("woff"),
-  url(../css/29acb3c63123183305b02ebc9844b2ef.otf) format("truetype");
-  font-style: normal;
-  font-weight: 700; }
-@font-face {
-  font-family: "Manrope";
-  src: url(../css/250c120c3f8b2b0bb58ea27ee36153fc.woff2) format("woff2"),
-  url(../css/c80d4fb11dcc2140b26007ce39cfa521.woff) format("woff"),
-  url(../css/fd2d932b381003546821288ecde6e370.otf) format("truetype");
-  font-style: normal;
-  font-weight: 600; }
-@font-face {
-  font-family: "Manrope";
-  src: url(../css/a7360927bb3673ed7814d6f607d122cb.woff2) format("woff2"),
-  url(../css/a8af1233a958bd1e96edcad65791a0d3.woff) format("woff"),
-  url(../css/40ef5dc59db6eeef16942fc6a0baa8de.otf) format("truetype");
-  font-style: normal;
-  font-weight: 500; }
-@font-face {
-  font-family: "Manrope";
-  src: url(../css/52260854eea2d38939bf40e9e9687830.woff2) format("woff2"),
-  url(../css/0f099f4e4d67aeb18ab6da291367a93f.woff) format("woff"),
-  url(../css/56b65c6bec8f40445da4f7853f2553ec.otf) format("truetype");
-  font-style: normal;
-  font-weight: 400; }
-@font-face {
-  font-family: "Manrope";
-  src: url(../css/57a1d494b0e76131f062c5c9c2d4960d.woff2) format("woff2"),
-  url(../css/016d41b1da3f1f5aaa44a7e20baee117.woff) format("woff"),
-  url(../css/4db1ea0d15010c761ee577d7c0f5a0a0.otf) format("truetype");
-  font-style: normal;
-  font-weight: 300; }
-@font-face {
-  font-family: "Manrope";
-  src: url(../css/38fa559ad8e8cbaee0c7a2178d308df5.woff2) format("woff2"),
-  url(../css/1e81f33d197ccdb39d4edce581ff50ec.woff) format("woff"),
-  url(../css/64041bf784575b30a79fa31900c79cf6.otf) format("truetype");
-  font-style: normal;
-  font-weight: 200; }
+  font-weight: 800;
+}
+/* ... pozostałe definicje @font-face ... */
+
 body, html {
-  font-family: "Manrope",sans-serif; }
-*,*:before,*:after {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
+  font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* Główne ustawienia nagłówka */
+.custom-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Kontener nagłówka */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo */
+.header-logo {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.logo-image {
+  max-height: 100px;
+  width: auto;
+}
+
+/* Elementy obok logo */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Styl dla każdego elementu - boxy */
+.header-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  width: 160px;
+  height: 40px;
+  padding: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.header-item:hover {
+  background-color: #fcb827;
+  cursor: pointer;
+}
+
+.header-item span {
+  color: black;
+  transition: none;
+}
+
+.header-item i {
+  margin-left: 5px;
+  font-size: 18px;
+  color: black;
+}
+
+/* Główne ustawienia boxa wyszukiwania */
+.search-box { /* lub #search-box jeśli zastosujesz Opcję 2 */
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Pole tekstowe wyszukiwarki */
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* Przycisk z lupką */
+.search-btn {
+  background-color: #fcb827;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn i {
+  font-size: 18px;
+  color: black;
+}
+
+.search-btn:hover {
+  background-color: red;
+}
+
+
+/* 
+
+Wrapper dla całej sekcji (newsletter + stopka) 
+
+*/
+/* Ogólne ustawienia sekcji newslettera */
+.newsletter-section-wrapper {
+  background: #f7f6fc;
+  padding: 50px 0;
+  width: 100%;
+}
+
+/* Sekcja newslettera */
+.newsletter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Niebieski box */
+.newsletter-content {
+  background-color: #0055ff;
+  color: white;
+  border-radius: 10px; /* Zwiększone zaokrąglenie */
+  padding: 30px; /* Większy odstęp wewnętrzny */
+  width: 90%; /* Poszerzenie do 90% szerokości */
+  max-width: 1200px; /* Maksymalna szerokość */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Tekst w newsletterze */
+.newsletter-text {
+  flex: 1;
+  text-align: left;
+}
+
+.newsletter-text h2 {
+  font-size: 28px; /* Większy tekst nagłówka */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.newsletter-text p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+/* Formularz w newsletterze */
+.newsletter-form {
+  display: flex;
+  gap: 15px; /* Większy odstęp między polem a przyciskiem */
+  align-items: center;
+}
+
+.newsletter-form input {
+  padding: 15px; /* Większe pole tekstowe */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  width: 250px; /* Szersze pole tekstowe */
+  box-sizing: border-box;
+}
+
+.newsletter-form button {
+  background-color: #fcb827;
+  color: black;
+  padding: 15px 30px; /* Większy przycisk */
+  font-size: 16px;
+  font-weight: bold; /* Pogrubiona czcionka */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #e5a423;
+}
+
+/* Kolorowy tekst */
+.colorful-text-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.colorful-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.colorful-text .highlight {
+  font-weight: bold;
+}
+
+.colorful-text .highlight.green {
+  color: #00ff00;
+}
+
+.colorful-text .highlight.yellow {
+  color: #ffc107;
+}
+
+.colorful-text .highlight.red {
+  color: #ff0000;
+}
+
+/* Stopka */
+.footer-container {
+  background-color: #f7f6fc;
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 30px 0; /* Większe odstępy */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  width: 45%;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #0055ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* PASEK KATEGORII */
+/* Resetowanie marginesów i wypełnień dla wszystkich elementów wewnątrz .block-categories */
+.block-categories,
+.block-categories ul,
+.block-categories li,
+.block-categories a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ustawienie box-sizing na wszystkie elementy wewnątrz .block-categories */
+.block-categories *,
+.block-categories *::before,
+.block-categories *::after {
+  box-sizing: border-box;
+}
+
+/* Stylizacja kontenera .block-categories */
+.block-categories {
+  background-color: #fcb827; /* Żółte tło */
+  border: 2px solid #ddd; /* Obramowanie */
+  border-radius: 15px; /* Zaokrąglenie rogów */
+  overflow: hidden; /* Ukrycie nadmiarów */
+  padding: 0; /* Brak wewnętrznych odstępów */
+  margin: 0; /* Brak zewnętrznych odstępów */
+  width: 100%; /* Pełna szerokość */
+  margin-left: 0; /* Upewnienie się, że nie ma dodatkowego marginesu po lewej */
+  padding-left: 0; /* Upewnienie się, że nie ma dodatkowego paddingu po lewej */
+}
+
+/* Stylizacja głównego kontenera strony */
+.container, .row, .container-fluid {
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* Stylizacja ul.category-top-menu */
+.block-categories ul.category-top-menu {
+  list-style: none; /* Usuń punkty listy */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Stylizacja pierwszego li (Nagłówek "Kategorie") */
+.block-categories ul.category-top-menu > li:first-child {
+  background-color: #fcb827; /* Żółte tło */
+  border-bottom: 1px solid #ddd; /* Linia oddzielająca */
+  border-radius: 15px 15px 0 0; /* Zaokrąglenie górnych rogów */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Stylizacja linku w pierwszym li */
+.block-categories ul.category-top-menu > li:first-child a.text-uppercase.h6 {
+  color: #000; /* Czarny tekst */
+  font-weight: bold; /* Pogrubienie */
+  font-size: 14px; /* Rozmiar czcionki */
+  padding: 10px 0; /* Wewnętrzne odstępy */
+  display: block; /* Blokowy element */
+  text-align: left; /* Wyrównanie do lewej */
+  width: 100%; /* Pełna szerokość */
+  text-decoration: none; /* Brak podkreślenia */
+  margin: 0; /* Zerowanie marginesów */
+}
+
+/* Hover efekt dla linku w pierwszym li */
+.block-categories ul.category-top-menu > li:first-child a.text-uppercase.h6:hover {
+  color: #007bff; /* Zmiana koloru na niebieski */
+}
+
+/* Stylizacja drugiego li (zawiera category-sub-menu) */
+.block-categories ul.category-top-menu > li:nth-child(2) {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Stylizacja ul.category-sub-menu */
+.block-categories ul.category-sub-menu {
+  list-style: none; /* Usuń punkty listy */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Stylizacja poszczególnych kategorii */
+.block-categories ul.category-sub-menu li {
+  background-color: #fff; /* Białe tło */
+  border-bottom: 1px solid #ddd; /* Linia oddzielająca */
+  margin: 0;
+  padding: 10px 0; /* Wewnętrzne odstępy */
+  text-align: left; /* Wyrównanie do lewej */
+  display: block; /* Blokowy element */
+  width: 100%;
+}
+
+/* Stylizacja linków w poszczególnych kategoriach */
+.block-categories ul.category-sub-menu li a {
+  text-decoration: none; /* Brak podkreślenia */
+  color: #000; /* Czarny tekst */
+  display: block; /* Blokowy element */
+  padding: 10px; /* Wewnętrzne odstępy */
+  width: 100%;
+}
+
+/* Hover efekt dla linków w poszczególnych kategoriach */
+.block-categories ul.category-sub-menu li a:hover {
+  color: #007bff; /* Zmiana koloru na niebieski */
+}
+
+/* Usunięcie dolnej linii na ostatniej kategorii */
+.block-categories ul.category-sub-menu li:last-child {
+  border-bottom: none;
+}
+
+/* Przeciwdziałanie stylom frameworków (np. Bootstrap) */
+.block-categories a.text-uppercase.h6 {
+  margin: 0; /* Zerowanie marginesów */
+  padding: 10px 0; /* Upewnienie się, że padding jest zgodny */
+  font-size: 14px; /* Upewnienie się, że rozmiar czcionki jest zgodny */
+}
+
+/*
+Style siatki kategorii
+*/
+/* Sekcja siatki kategorii */
+
+/* Sekcja kategorii */
+.category-row {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Opcjonalne tło */
+}
+
+.category-row h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Ustawienie w jednym rzędzie */
+.row-container {
+  display: flex;
+  justify-content: space-around; /* Równomierne rozmieszczenie elementów */
+  align-items: stretch; /* Wszystkie elementy tej samej wysokości */
+  gap: 15px; /* Odstęp między elementami */
+  flex-wrap: nowrap; /* Elementy pozostają w jednym rzędzie */
+  overflow-x: auto; /* Dodanie przewijania w przypadku zbyt wielu elementów */
+}
+
+/* Pojedynczy element */
+.row-item {
+  flex: 0 0 150px; /* Szerokość każdego elementu */
+  height: 200px; /* Wysokość każdego elementu */
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Obrazek i tekst w pionie */
+  justify-content: space-between; /* Obrazek na górze, tekst na dole */
+  align-items: center;
+}
+
+.row-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styl obrazków */
+.row-item img {
+  width: 100%; /* Obraz zajmuje pełną szerokość elementu */
+  height: 120px; /* Stała wysokość obrazka */
+  object-fit: contain; /* Skaluje obraz tak, aby cały był widoczny */
+  background-color: #f9f9f9; /* Opcjonalne tło dla pustych przestrzeni */
+  border-bottom: 1px solid #ddd; /* Oddzielenie obrazka od tekstu */
+}
+
+
+/* Tekst pod obrazkiem */
+.row-item p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 5px; /* Odstęp od krawędzi ramki */
+  color: #333;
+  text-align: center;
+  white-space: normal; /* Pozwól tekstowi zawijać się na kolejne linie */
+  overflow: visible; /* Tekst nie będzie przycinany */
+  word-wrap: break-word; /* Złam zbyt długie słowa, aby zmieściły się w ramce */
+}
+
+
+/*
+Sekcja marek
+*/
+/* Sekcja producentów */
+.producers-row {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Opcjonalne tło */
+}
+
+.producers-row h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Kontener dla producentów */
+.producers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamiczne kolumny */
+  gap: 0; /* Brak odstępów między elementami */
+  border: 1px solid #ddd; /* Kontur całego kontenera */
+  background-color: #fff; /* Opcjonalne tło */
+}
+
+/* Pojedynczy producent */
+.producer-item {
+  border: 1px solid #ddd; /* Kontur wokół każdego logo */
+  overflow: hidden; /* Ukryj nadmiar elementów */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.producer-item img {
+  width: 100%; /* Obraz zajmuje całą szerokość komórki */
+  height: 100px; /* Stała wysokość logo */
+  object-fit: contain; /* Zachowaj proporcje logo */
+  padding: 10px; /* Odstęp wewnątrz komórki */
+}
+
+/* Styl dla tekstu pod blokiem z firmami */
+.text-below-brands {
+  margin-top: 30px; /* Odstęp od bloku z firmami */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.text-below-brands p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.text-below-brands h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+
+
+/*
+
+Sekcja informacji, koszty dostawy, hurtownia
+
+*/
+/* Wrapper dla info-boxów */
+.info-box-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Wszystkie elementy mają taką samą wysokość */
+  margin-top: 30px;
+  gap: 20px;
+}
+
+/* Styl dla każdego info-boxa */
+.info-box {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1; /* Wszystkie boxy będą miały równą szerokość */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Wyrównanie treści w pionie */
+  align-items: center;
+  height: 200px; /* Stała wysokość dla boxów */
+  max-width: 250px; /* Ustawienie maksymalnej szerokości */
+}
+
+/* Styl dla obrazów w info-boxach */
+.info-box img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain; /* Zachowanie proporcji */
+  margin-bottom: 10px;
+}
+
+/* Tekst w info-boxach */
+.info-box p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+/* Wrapper dla przycisków */
+.button-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  gap: 10px; /* Odstęp między przyciskami */
+}
+
+/* Styl dla przycisków */
+.custom-button {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: #ddd;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #bbb;
+  transform: translateY(-3px);
+}
+
+/* Powiększenie kontenera "Hurtownia" */
+.warehouse-box {
+  flex: 1.5; /* Powiększa kontener hurtowni w stosunku do pozostałych */
+}
+
+/* Powiększenie obrazka w kontenerze "Hurtownia" */
+.warehouse-box img {
+  object-fit: contain; /* Zachowanie proporcji */
+  min-height: 150px;
+  min-width: 150px;
+}
+
+
+
+
 /*!
  * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
