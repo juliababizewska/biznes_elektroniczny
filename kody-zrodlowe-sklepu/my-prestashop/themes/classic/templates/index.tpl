@@ -32,44 +32,43 @@
       {block name='hook_home'}
         <div class="container">
           <div class="row">
-            <!-- Pionowy pasek kategorii -->
             <div class="col-lg-3 col-md-4 col-sm-12 categories-sidebar-vertical">
               {hook h='displayLeftColumn'}
             </div>
-
-            <!-- Slider -->
-            <div class="col-lg-9 col-md-8 col-sm-12 slider-section">
+            <div class="col-lg-8 col-md-8 col-sm-12 slider-section">
               {$HOOK_HOME nofilter}
             </div>
           </div>
         </div>
+
+
       {/block}
 
       <!-- Dodajemy sekcję kategorii tutaj -->
       <section class="category-row">
         <h2>Odkryj nasze kategorie</h2>
         <div class="row-container">
-          <a href="link-do-kategorii-1" class="row-item">
+          <a href="https://localhost:8080/pl/10-wloczki" class="row-item">
             <img src="{$urls.base_url}themes/classic/assets/img/wloczka.jpg" alt="Włóczki">
             <p>Włóczki</p>
           </a>
-          <a href="link-do-kategorii-2" class="row-item">
+          <a href="https://localhost:8080/pl/31-sznurki" class="row-item">
             <img src="{$urls.base_url}themes/classic/assets/img/sznurki.jpg" alt="Sznurki">
             <p>Sznurki</p>
           </a>
-          <a href="link-do-kategorii-3" class="row-item">
+          <a href="https://localhost:8080/pl/61-kordonki-mulina" class="row-item">
             <img src="{$urls.base_url}themes/classic/assets/img/kordonkimuliny.jpeg" alt="Kordonki Mulina">
             <p>Kordonki Mulina</p>
           </a>
-          <a href="link-do-kategorii-4" class="row-item">
+          <a href="https://localhost:8080/pl/69-akcesoria-do-robotek" class="row-item">
             <img src="{$urls.base_url}themes/classic/assets/img/akcesoriadorobotek.jpg" alt="Akcesoria do robótek">
             <p>Akcesoria do robótek</p>
           </a>
-          <a href="link-do-kategorii-5" class="row-item">
+          <a href="https://localhost:8080/pl/107-akcesoria-do-maskotek" class="row-item">
             <img src="{$urls.base_url}themes/classic/assets/img/akcesoriadomaskotek.png" alt="Akcesoria do maskotek">
             <p>Akcesoria do maskotek</p>
           </a>
-          <a href="{$urls.base_url}themes/classic/assets/img/akcesoriaidodatkikrawieckie.jpg" class="row-item">
+          <a href="https://localhost:8080/pl/125-akcesoria-i-dodatki-krawieckie" class="row-item">
             <img src="{$urls.base_url}themes/classic/assets/img/akcesoriaidodatkikrawieckie.jpg" alt="Akcesoria i dodatki krawieckie">
             <p>Akcesoria i dodatki krawieckie</p>
           </a>
@@ -81,19 +80,19 @@
   <section class="producers-row">
     <h2>Szukaj doskonałych włóczek wśród swoich ulubionych marek.</h2>
     <div class="producers-container">
-      <a href="link-do-producenta-1" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=katia" class="producer-item">
         <img src="{$urls.base_url}themes/classic/assets/img/katia.png" alt="Katia">
       </a>
-      <a href="link-do-producenta-2" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=lammy" class="producer-item">
         <img src="{$urls.base_url}themes/classic/assets/img/lammy.jpg" alt="Lammy">
       </a>
       <a href="link-do-producenta-3" class="producer-item">
         <img src="{$urls.base_url}themes/classic/assets/img/lopi.jpg" alt="Lopi">
       </a>
-      <a href="link-do-producenta-4" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=lopi" class="producer-item">
         <img src="{$urls.base_url}themes/classic/assets/img/valeria.png" alt="Valeria Lanas">
       </a>
-      <a href="link-do-producenta-5" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=sesia" class="producer-item">
         <img src="{$urls.base_url}themes/classic/assets/img/sesia.jpg" alt="Sesia">
       </a>
     </div>

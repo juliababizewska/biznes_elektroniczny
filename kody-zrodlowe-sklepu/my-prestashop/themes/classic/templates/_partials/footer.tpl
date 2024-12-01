@@ -31,8 +31,9 @@
         <h2>Dołącz do naszego klubu.</h2>
         <p>Dołącz do naszego klubu i otrzymuj ciekawe informacje, promocje i rabaty.</p>
       </div>
-      <form class="newsletter-form" action="#">
-        <input type="email" placeholder="Twój email..." required>
+      <!-- Formularz z poprawnym action -->
+      <form class="newsletter-form" action="https://localhost:8080/pl/#blockEmailSubscription_displayFooterBefore" method="post">
+        <input type="email" name="email" placeholder="Twój email..." required>
         <button type="submit" class="newsletter-btn">Dodaj</button>
       </form>
     </div>

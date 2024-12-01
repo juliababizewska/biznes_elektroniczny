@@ -59,14 +59,11 @@ body, html {
   font-family: "Manrope", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f7f6fc; /* Tło całej strony */
 }
 
-*, *:before, *:after {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+
+
 
 /* Główne ustawienia nagłówka */
 .custom-header {
@@ -345,24 +342,14 @@ Wrapper dla całej sekcji (newsletter + stopka)
   font-size: 12px;
   color: #666;
 }
+.main-wrapper {
+  background-color: #f7f6fc;
+}
+
 
 /* PASEK KATEGORII */
 /* Resetowanie marginesów i wypełnień dla wszystkich elementów wewnątrz .block-categories */
-.block-categories,
-.block-categories ul,
-.block-categories li,
-.block-categories a {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Ustawienie box-sizing na wszystkie elementy wewnątrz .block-categories */
-.block-categories *,
-.block-categories *::before,
-.block-categories *::after {
-  box-sizing: border-box;
-}
 
 /* Stylizacja kontenera .block-categories */
 .block-categories {
@@ -372,25 +359,18 @@ Wrapper dla całej sekcji (newsletter + stopka)
   overflow: hidden; /* Ukrycie nadmiarów */
   padding: 0; /* Brak wewnętrznych odstępów */
   margin: 0; /* Brak zewnętrznych odstępów */
-  width: 100%; /* Pełna szerokość */
   margin-left: 0; /* Upewnienie się, że nie ma dodatkowego marginesu po lewej */
   padding-left: 0; /* Upewnienie się, że nie ma dodatkowego paddingu po lewej */
+  
 }
 
-/* Stylizacja głównego kontenera strony */
-.container, .row, .container-fluid {
-  margin-left: 0;
-  padding-left: 0;
-  margin-right: 0;
-  padding-right: 0;
-}
+
 
 /* Stylizacja ul.category-top-menu */
 .block-categories ul.category-top-menu {
   list-style: none; /* Usuń punkty listy */
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 /* Stylizacja pierwszego li (Nagłówek "Kategorie") */
@@ -400,20 +380,18 @@ Wrapper dla całej sekcji (newsletter + stopka)
   border-radius: 15px 15px 0 0; /* Zaokrąglenie górnych rogów */
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
-/* Stylizacja linku w pierwszym li */
+/* Stylizacja linku w nagłówku "Kategorie" */
 .block-categories ul.category-top-menu > li:first-child a.text-uppercase.h6 {
   color: #000; /* Czarny tekst */
-  font-weight: bold; /* Pogrubienie */
+  font-weight: bold; /* Pogrubienie tylko nagłówka */
   font-size: 14px; /* Rozmiar czcionki */
   padding: 10px 0; /* Wewnętrzne odstępy */
   display: block; /* Blokowy element */
   text-align: left; /* Wyrównanie do lewej */
-  width: 100%; /* Pełna szerokość */
+
   text-decoration: none; /* Brak podkreślenia */
-  margin: 0; /* Zerowanie marginesów */
 }
 
 /* Hover efekt dla linku w pierwszym li */
@@ -433,7 +411,7 @@ Wrapper dla całej sekcji (newsletter + stopka)
   list-style: none; /* Usuń punkty listy */
   margin: 0;
   padding: 0;
-  width: 100%;
+
 }
 
 /* Stylizacja poszczególnych kategorii */
@@ -444,16 +422,17 @@ Wrapper dla całej sekcji (newsletter + stopka)
   padding: 10px 0; /* Wewnętrzne odstępy */
   text-align: left; /* Wyrównanie do lewej */
   display: block; /* Blokowy element */
-  width: 100%;
+
 }
 
-/* Stylizacja linków w poszczególnych kategoriach */
+/* Stylizacja poszczególnych kategorii (usunie pogrubienie) */
 .block-categories ul.category-sub-menu li a {
   text-decoration: none; /* Brak podkreślenia */
   color: #000; /* Czarny tekst */
+  font-weight: normal; /* Usuń pogrubienie dla kategorii */
   display: block; /* Blokowy element */
   padding: 10px; /* Wewnętrzne odstępy */
-  width: 100%;
+
 }
 
 /* Hover efekt dla linków w poszczególnych kategoriach */
@@ -697,6 +676,537 @@ Sekcja informacji, koszty dostawy, hurtownia
   min-height: 150px;
   min-width: 150px;
 }
+
+/*
+
+Kod podstrony produktu
+
+*/
+
+
+/* Ogólny styl breadcrumbs */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px; /* Rozmiar tekstu */
+  color: #666; /* Szary kolor tekstu */
+  margin: 10px 0; /* Odstępy nad i pod breadcrumbs */
+  padding: 0;
+  list-style: none;
+}
+
+/* Każdy element breadcrumbs */
+.breadcrumb li {
+  display: inline;
+  margin-right: 5px; /* Odstęp między elementami */
+  font-weight: normal !important; /* Wymuszenie normalnej czcionki */
+}
+
+/* Styl linków w breadcrumbs */
+.breadcrumb li a {
+  text-decoration: none; /* Usuń podkreślenie linków */
+  color: #007bff; /* Kolor linków */
+  transition: color 0.3s ease; /* Animacja zmiany koloru */
+  font-weight: normal !important; /* Wymuszenie normalnej czcionki */
+}
+
+/* Styl linków po najechaniu myszką */
+.breadcrumb li a:hover {
+  color: #0056b3; /* Zmiana koloru linku po najechaniu */
+}
+
+/* Separator między elementami */
+.breadcrumb li::after {
+  content: "•"; /* Kropka jako separator */
+  margin-left: 5px; /* Odstęp po lewej stronie kropki */
+  color: #999; /* Kolor separatora */
+}
+
+/* Usuń separator dla ostatniego elementu */
+.breadcrumb li:last-child::after {
+  content: ""; /* Brak separatora dla ostatniego elementu */
+}
+
+/* Styl ostatniego elementu (aktualnej pozycji) */
+.breadcrumb li:last-child {
+  color: #333; /* Kolor ostatniego elementu */
+  font-weight: bold; /* Pogrubienie tylko ostatniego elementu */
+}
+
+
+/*
+
+Style dodaj do koszyka
+
+*/
+
+/* Stylizacja licznika ilości */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.quantity-decrease,
+.quantity-increase {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+}
+
+.quantity-decrease:hover,
+.quantity-increase:hover {
+  background-color: #ddd;
+}
+
+.js-quantity-product {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.bootstrap-touchspin {
+  display: flex; /* Wyświetlenie pola i guzików w jednym wierszu */
+  align-items: center; /* Wyśrodkowanie elementów w pionie */
+  gap: 5px; /* Odstęp między polem i guzikami */
+}
+
+.bootstrap-touchspin .input-group-btn-vertical {
+  display: flex; /* Wyświetlenie przycisków */
+  flex-direction: column; /* Guziki w pionie */
+  justify-content: space-between; /* Wyśrodkowanie */
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .btn {
+  width: 30px; /* Mniejsza szerokość przycisków */
+  height: 30px; /* Mniejsza wysokość przycisków */
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  align-items: center; /* Wyśrodkowanie strzałek w pionie */
+  justify-content: center; /* Wyśrodkowanie strzałek w poziomie */
+  font-size: 14px; /* Rozmiar strzałek */
+  border: 1px solid #ccc; /* Obramowanie guzików */
+  background-color: #f8f8f8; /* Jasnoszare tło */
+  cursor: pointer; /* Kursor wskazujący */
+  border-radius: 3px; /* Opcjonalne lekkie zaokrąglenie */
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .btn:hover {
+  background-color: #e0e0e0; /* Ciemniejsze tło przy najechaniu */
+}
+
+.bootstrap-touchspin input.js-quantity-product {
+  text-align: center; /* Wyśrodkowanie liczby */
+  width: 50px; /* Węższe pole */
+  height: 30px; /* Wysokość dopasowana do guzików */
+  font-size: 14px; /* Rozmiar tekstu w polu */
+  border: 1px solid #ccc; /* Obramowanie pola */
+  border-radius: 3px; /* Opcjonalne zaokrąglenie */
+}
+
+.bootstrap-touchspin .bootstrap-touchspin-up {
+  border-bottom: 1px solid #ccc; /* Dodatkowe rozdzielenie między guzikami */
+}
+
+.bootstrap-touchspin .bootstrap-touchspin-down {
+  margin-top: -1px; /* Usuń przerwę między guzikami */
+}
+.bootstrap-touchspin {
+  display: flex !important;
+}
+
+
+/* Stylizacja przycisku „Dodaj do koszyka” */
+.btn-add-to-cart {
+  background-color: #ffd700 !important; /* Żółte tło */
+  
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s !important;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #ff0000 !important; /* Czerwone tło po najechaniu */
+  border: 2px solid #007bff !important; /* Niebieska obramówka */
+  color: #fff !important;
+  border-color: #007bff !important;
+}
+
+/* Stylizacja ikony koszyka */
+.btn-add-to-cart i {
+  font-size: 20px !important;
+}
+
+
+/* zmiana koloru nowy */
+.product-flag.new {
+  background-color: #FFD700 !important; /* Zmiana koloru tła na żółty */
+  color: #000 !important; /* Zmiana koloru tekstu na czarny */
+  font-weight: bold; /* Opcjonalne pogrubienie tekstu */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  padding: 5px 10px; /* Wewnętrzne odstępy */
+}
+
+/*
+
+Syle opisu produktu
+
+*/
+
+.product-details {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price-history {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.price-summary {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.price-summary strong {
+  font-weight: bold;
+}
+
+.final-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+/*
+
+Style opisu
+
+*/
+.product-description-section {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.product-description-section .product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product-description-section .product-details {
+  margin-top: 15px;
+}
+
+.product-information {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-top: 20px;
+}
+
+.product-information .product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-information .price-summary {
+  margin-bottom: 15px;
+}
+
+.product-information .final-price {
+  font-size: 28px;
+  color: #F9A825; /* Żółty kolor ceny */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-information .additional-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.product-information .additional-info strong {
+  font-weight: bold;
+}
+
+.product-information .text-danger {
+  color: red;
+}
+
+.product-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 
+Style recenzji i pytań
+*/
+#product-comments-reviews {
+  margin-top: 30px;
+}
+
+.reviews-section h2, .questions-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  position: relative; /* Dodane dla pseudoelementu */
+}
+
+.reviews-section h2::after, .questions-section h2::after {
+  content: ""; /* Pseudoelement */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Odległość od tekstu */
+  width: 100%; /* Szerokość podkreślenia */
+  height: 2px; /* Grubość podkreślenia */
+  background-color: #FFC107; /* Żółty kolor podkreślenia */
+}
+
+.reviews-section, .questions-section {
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.reviews-section p, .questions-section p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.add-review-link {
+  color: #007BFF; /* Niebieski kolor linku */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.add-review-link:hover {
+  text-decoration: underline;
+}
+
+.ask-question-btn {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ask-question-btn:hover {
+  background-color: #FFC107; /* Żółty kolor na hover */
+  color: #000;
+}
+#product-comments-reviews {
+  margin-top: 30px;
+}
+
+.reviews-section h2, .questions-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  position: relative; /* Dodane dla pseudoelementu */
+}
+
+.reviews-section h2::after, .questions-section h2::after {
+  content: ""; /* Pseudoelement */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Odległość od tekstu */
+  width: 100%; /* Szerokość podkreślenia */
+  height: 3px; /* Grubość podkreślenia */
+  background-color: #FFC107; /* Żółty kolor podkreślenia */
+}
+
+
+
+/*
+Wuzek
+*/
+.quantity-add-to-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Wszystkie elementy od lewej */
+  gap: 20px; /* Odstęp między polem ilości a przyciskiem */
+  margin-top: 20px; /* Opcjonalne odstępy od góry */
+}
+
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-wrapper input {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0;
+}
+
+input#quantity_wanted::-webkit-inner-spin-button,
+input#quantity_wanted::-webkit-outer-spin-button {
+  display: block; /* Upewnij się, że przyciski od PrestaShop się wyświetlają */
+}
+
+.btn-add-to-cart {
+  background-color: #FFC107; /* Żółty kolor */
+  color: #000; /* Czarny tekst */
+  font-weight: bold; /* Pogrubienie */
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid #000; /* Obramowanie */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px; /* Zaokrąglone rogi */
+}
+
+.btn-add-to-cart:hover {
+  background-color: #FFA500; /* Ciemniejszy żółty na hover */
+  color: #fff; /* Biały tekst na hover */
+}
+
+
+
+/* Import Material Icons font */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Styl dla serca */
+.watch-product {
+  display: inline-flex; /* Flexbox for centering */
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 50%; /* Zaokrąglenie */
+  width: 32px; /* Szerokość kontenera serca */
+  height: 32px; /* Wysokość kontenera serca */
+  padding: 4px; /* Padding wewnątrz serca */
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer; /* Kursor wskazujący możliwość kliknięcia */
+  background-color: transparent; /* Transparentne tło */
+}
+
+.watch-product .material-icons {
+  font-size: 24px; /* Rozmiar ikony */
+  color: red; /* Kolor serca */
+}
+
+/* Opcjonalny efekt na hover */
+.watch-product:hover {
+  background-color: rgba(255, 0, 0, 0.1); /* Opcjonalne tło po najechaniu */
+  border-color: darkred; /* Zmiana koloru obramowania po najechaniu */
+}
+
+/* Styl dla gwiazdek */
+.star-rating .material-icons.star {
+  font-size: 20px; /* Rozmiar ikony */
+  color: gold; /* Kolor gwiazdek */
+  transition: color 0.3s;
+  cursor: pointer; /* Kursor wskazujący możliwość kliknięcia */
+}
+
+/* Opcjonalny efekt na hover dla gwiazdek */
+.star-rating .material-icons.star:hover,
+.star-rating .material-icons.star:hover ~ .material-icons.star {
+  color: darkgoldenrod; /* Zmiana koloru gwiazdek po najechaniu */
+}
+
+
+/*
+Styl ceny
+*/
+.custom-price-wrapper .current-price,
+.custom-price-wrapper .product-price {
+    color: #FFD700 !important; /* Żółty kolor, wymuszony */
+    text-align: right; /* Wyrównanie do prawej */
+    font-weight: bold; /* Opcjonalnie pogrubienie */
+}
+
+/* Wyrównanie ceny do prawej strony i zmiana koloru na żółty */
+.custom-price-wrapper {
+  text-align: right; /* Wyrównanie tekstu do prawej strony */
+  color: #FFD700 !important;  /* Kolor żółty */
+   /* Opcjonalnie pogrubienie */
+}
+
+/* Dostosowanie napisu "brutto" (jeśli jest osobny) */
+.custom-price-wrapper span {
+  display: block; /* Sprawia, że każda linia jest osobnym blokiem */
+  color: #666; /* Szary kolor dla "brutto" */
+  font-size: 0.9em; /* Zmniejszony rozmiar czcionki */
+}
+
+
+
+/*
+Sekcja kategorii na podstronie produktu
+*/
+
+.product-container {
+  display: flex; /* Ustawienie elementów obok siebie */
+  flex-wrap: nowrap; /* Zapobieganie zawijaniu się wierszy */
+  align-items: flex-start; /* Wyrównanie górnej krawędzi */
+  margin-right: 10px; /* Zmniejsz margines po prawej stronie */
+}
+
+.product-container .col-md-6 {
+  flex: 0 0 50%; /* Zdjęcie zajmuje 50% szerokości */
+  max-width: 50%; /* Ustawienie maksymalnej szerokości na 50% */
+}
+
+.product-container .col-md-3 {
+  flex: 0 0 25%; /* Sekcja kategorii zajmuje 25% szerokości */
+  max-width: 25%; /* Ustawienie maksymalnej szerokości na 25% */
+}
+
+.product-container .product-information {
+  flex: 1; /* Opis produktu zajmuje pozostałą przestrzeń */
+  padding-left: 15px; /* Dostosowanie odstępu między zdjęciem a opisem */
+}
+
+.product-description,
+.product-prices {
+  margin-top: 0; /* Zmniejszenie marginesu górnego */
+}
+
+.categories-sidebar-vertical {
+  margin-right: 10px; /* Zmniejszenie odstępu po prawej stronie kategorii */
+}
+
 
 
 

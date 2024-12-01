@@ -23,6 +23,7 @@
   <div class="header-container">
     <!-- Zdjęcie logo -->
     <div class="header-logo" id="logo-section">
+     <a href="https://localhost:8080">
       <img src="{$urls.base_url}themes/classic/assets/img/logo.jpeg" alt="Logo" class="logo-image">
     </div>
 

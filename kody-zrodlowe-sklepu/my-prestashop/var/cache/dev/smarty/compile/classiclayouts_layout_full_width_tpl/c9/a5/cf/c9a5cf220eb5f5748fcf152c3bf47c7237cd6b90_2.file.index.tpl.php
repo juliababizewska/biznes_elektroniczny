@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-30 02:31:24
+/* Smarty version 3.1.48, created on 2024-12-01 01:02:40
   from '/var/www/html/themes/classic/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674a6aec33de85_60409615',
+  'unifunc' => 'content_674ba7a0e7d590_92503134',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c9a5cf220eb5f5748fcf152c3bf47c7237cd6b90' => 
     array (
       0 => '/var/www/html/themes/classic/templates/index.tpl',
-      1 => 1732930278,
+      1 => 1733011327,
       2 => 'file',
     ),
   ),
@@ -20,58 +20,57 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674a6aec33de85_60409615 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674ba7a0e7d590_92503134 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_64620898674a6aec3398d2_91709212', 'page_content_container');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1109095848674ba7a0e79fd9_50810679', 'page_content_container');
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, 'page.tpl');
 }
 /* {block 'page_content_top'} */
-class Block_617344568674a6aec339d31_82705746 extends Smarty_Internal_Block
+class Block_1214931584674ba7a0e7a233_87965690 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 }
 /* {/block 'page_content_top'} */
 /* {block 'hook_home'} */
-class Block_921529498674a6aec33a3d8_91063870 extends Smarty_Internal_Block
+class Block_604528139674ba7a0e7a768_77889829 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
         <div class="container">
           <div class="row">
-            <!-- Pionowy pasek kategorii -->
             <div class="col-lg-3 col-md-4 col-sm-12 categories-sidebar-vertical">
               <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayLeftColumn'),$_smarty_tpl ) );?>
 
             </div>
-
-            <!-- Slider -->
-            <div class="col-lg-9 col-md-8 col-sm-12 slider-section">
+            <div class="col-lg-8 col-md-8 col-sm-12 slider-section">
               <?php echo $_smarty_tpl->tpl_vars['HOOK_HOME']->value;?>
 
             </div>
           </div>
         </div>
+
+
       <?php
 }
 }
 /* {/block 'hook_home'} */
 /* {block 'page_content'} */
-class Block_1820491039674a6aec33a1b9_63904789 extends Smarty_Internal_Block
+class Block_794541682674ba7a0e7a5b7_19962693 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_921529498674a6aec33a3d8_91063870', 'hook_home', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_604528139674ba7a0e7a768_77889829', 'hook_home', $this->tplIndex);
 ?>
 
 
@@ -79,33 +78,32 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_921529498674a6aec3
       <section class="category-row">
         <h2>Odkryj nasze kategorie</h2>
         <div class="row-container">
-          <a href="link-do-kategorii-1" class="row-item">
+          <a href="https://localhost:8080/pl/10-wloczki" class="row-item">
             <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/wloczka.jpg" alt="Włóczki">
             <p>Włóczki</p>
           </a>
-          <a href="link-do-kategorii-2" class="row-item">
+          <a href="https://localhost:8080/pl/31-sznurki" class="row-item">
             <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/sznurki.jpg" alt="Sznurki">
             <p>Sznurki</p>
           </a>
-          <a href="link-do-kategorii-3" class="row-item">
+          <a href="https://localhost:8080/pl/61-kordonki-mulina" class="row-item">
             <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/kordonkimuliny.jpeg" alt="Kordonki Mulina">
             <p>Kordonki Mulina</p>
           </a>
-          <a href="link-do-kategorii-4" class="row-item">
+          <a href="https://localhost:8080/pl/69-akcesoria-do-robotek" class="row-item">
             <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/akcesoriadorobotek.jpg" alt="Akcesoria do robótek">
             <p>Akcesoria do robótek</p>
           </a>
-          <a href="link-do-kategorii-5" class="row-item">
+          <a href="https://localhost:8080/pl/107-akcesoria-do-maskotek" class="row-item">
             <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/akcesoriadomaskotek.png" alt="Akcesoria do maskotek">
             <p>Akcesoria do maskotek</p>
           </a>
-          <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
-themes/classic/assets/img/akcesoriaidodatkikrawieckie.jpg" class="row-item">
+          <a href="https://localhost:8080/pl/125-akcesoria-i-dodatki-krawieckie" class="row-item">
             <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/akcesoriaidodatkikrawieckie.jpg" alt="Akcesoria i dodatki krawieckie">
             <p>Akcesoria i dodatki krawieckie</p>
@@ -118,11 +116,11 @@ themes/classic/assets/img/akcesoriaidodatkikrawieckie.jpg" alt="Akcesoria i doda
   <section class="producers-row">
     <h2>Szukaj doskonałych włóczek wśród swoich ulubionych marek.</h2>
     <div class="producers-container">
-      <a href="link-do-producenta-1" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=katia" class="producer-item">
         <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/katia.png" alt="Katia">
       </a>
-      <a href="link-do-producenta-2" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=lammy" class="producer-item">
         <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/lammy.jpg" alt="Lammy">
       </a>
@@ -130,11 +128,11 @@ themes/classic/assets/img/lammy.jpg" alt="Lammy">
         <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/lopi.jpg" alt="Lopi">
       </a>
-      <a href="link-do-producenta-4" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=lopi" class="producer-item">
         <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/valeria.png" alt="Valeria Lanas">
       </a>
-      <a href="link-do-producenta-5" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=sesia" class="producer-item">
         <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/sesia.jpg" alt="Sesia">
       </a>
@@ -249,24 +247,24 @@ themes/classic/assets/img/W.jpg" alt="Hurtownia">
 }
 /* {/block 'page_content'} */
 /* {block 'page_content_container'} */
-class Block_64620898674a6aec3398d2_91709212 extends Smarty_Internal_Block
+class Block_1109095848674ba7a0e79fd9_50810679 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'page_content_container' => 
   array (
-    0 => 'Block_64620898674a6aec3398d2_91709212',
+    0 => 'Block_1109095848674ba7a0e79fd9_50810679',
   ),
   'page_content_top' => 
   array (
-    0 => 'Block_617344568674a6aec339d31_82705746',
+    0 => 'Block_1214931584674ba7a0e7a233_87965690',
   ),
   'page_content' => 
   array (
-    0 => 'Block_1820491039674a6aec33a1b9_63904789',
+    0 => 'Block_794541682674ba7a0e7a5b7_19962693',
   ),
   'hook_home' => 
   array (
-    0 => 'Block_921529498674a6aec33a3d8_91063870',
+    0 => 'Block_604528139674ba7a0e7a768_77889829',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -274,12 +272,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
   <section id="content" class="page-home">
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_617344568674a6aec339d31_82705746', 'page_content_top', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1214931584674ba7a0e7a233_87965690', 'page_content_top', $this->tplIndex);
 ?>
 
 
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1820491039674a6aec33a1b9_63904789', 'page_content', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_794541682674ba7a0e7a5b7_19962693', 'page_content', $this->tplIndex);
 ?>
 
   </section>
