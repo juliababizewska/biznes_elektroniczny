@@ -67,13 +67,31 @@ body, html {
 
 /* Główne ustawienia nagłówka */
 .custom-header {
-  display: flex;
+  display: block;
+
   justify-content: flex-start;
   align-items: center;
   padding: 10px 20px;
   background-color: white;
   border-bottom: 1px solid #ccc;
 }
+/* Styl dla linków w header-item */
+.header-item a {
+  display: block;
+  width: 100%; /* Link zajmuje całą szerokość rodzica */
+  height: 100%; /* Link zajmuje całą wysokość rodzica */
+  text-decoration: none; /* Usuń podkreślenie linków */
+  color: inherit; /* Dziedzicz kolor z rodzica */
+  display: flex; /* Flex dla centrowania zawartości */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.header-item:hover a {
+  background-color: #fcb827; /* Efekt hover na całym linku */
+}
+
 
 /* Kontener nagłówka */
 .header-container {
@@ -134,7 +152,7 @@ body, html {
 }
 
 /* Główne ustawienia boxa wyszukiwania */
-.search-box { /* lub #search-box jeśli zastosujesz Opcję 2 */
+.search-box {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
@@ -147,6 +165,7 @@ body, html {
 
 /* Pole tekstowe wyszukiwarki */
 .search-input {
+  display: block;
   flex: 1;
   border: none;
   padding: 10px;
@@ -158,6 +177,7 @@ body, html {
 
 /* Przycisk z lupką */
 .search-btn {
+  display: block;
   background-color: #fcb827;
   border: none;
   padding: 0 15px;

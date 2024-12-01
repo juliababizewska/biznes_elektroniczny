@@ -178,7 +178,8 @@
           
         </div>
 
-        <button type="submit" class="btn btn-primary btn-add-to-cart">
+        <button type="submit" data-button-action = "add-to-cart" class="btn btn-primary btn-add-to-cart">
+          
           <i class="material-icons">shopping_cart</i>
           Dodaj do koszyka
         </button>

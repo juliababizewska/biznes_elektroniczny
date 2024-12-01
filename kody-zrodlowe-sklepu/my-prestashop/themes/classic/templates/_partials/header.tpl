@@ -1,30 +1,10 @@
-{**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License 3.0 (AFL-3.0)
- * that is bundled with this package in the file LICENSE.md.
- * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/AFL-3.0
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
- *}
-
 <header class="custom-header" id="main-header">
   <div class="header-container">
     <!-- Zdjęcie logo -->
     <div class="header-logo" id="logo-section">
-     <a href="https://localhost:8080">
-      <img src="{$urls.base_url}themes/classic/assets/img/logo.jpeg" alt="Logo" class="logo-image">
+      <a href="https://localhost:8080">
+        <img src="{$urls.base_url}themes/classic/assets/img/logo.jpeg" alt="Logo" class="logo-image">
+      </a>
     </div>
 
     <!-- Elementy obok logo -->
@@ -54,7 +34,7 @@
 
       <!-- Koszyk -->
       <div class="header-item" id="cart-item">
-        <a href="{$urls.pages.cart}">
+        <a href="https://localhost:8080/pl/koszyk?action=show">
           <span>Koszyk</span>
           <i class="material-icons">shopping_cart</i>
         </a>
@@ -70,3 +50,20 @@
     </div>
   </div>
 </header>
+
+<!-- Dodaj skrypt na końcu dokumentu -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchBox = document.getElementById('search-box');
+
+    // Zapobiegaj wysłaniu formularza przy kliknięciu w pole input
+    searchInput.addEventListener('click', function(event) {
+      event.preventDefault();
+      // Opcjonalnie: ustaw fokus na polu input, jeśli potrzebujesz
+      searchInput.focus();
+    });
+
+    // Formularz zostanie wysłany normalnie przy kliknięciu przycisku lub naciśnięciu Enter
+  });
+</script>
