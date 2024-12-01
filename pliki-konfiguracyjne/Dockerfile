@@ -13,3 +13,7 @@ RUN chmod +x /usr/local/bin/setup-ssl.sh
 RUN /usr/local/bin/setup-ssl.sh
 
 CMD ["apache2-foreground"]
+
+#ENV PHP_INI_SCAN_DIR=/:/etc/php
+#ENV PHP_OPTIONS="-d stream_context_verify_peer=0 -d stream_context_verify_peer_name=0"
+

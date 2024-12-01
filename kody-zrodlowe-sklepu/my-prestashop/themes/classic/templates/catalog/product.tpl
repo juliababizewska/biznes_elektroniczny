@@ -22,10 +22,14 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
+
 {extends file=$layout}
 
 {block name='head' append}
   <meta property="og:type" content="product">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
   {if $product.cover}
     <meta property="og:image" content="{$product.cover.large.url}">
   {/if}
@@ -37,8 +41,8 @@
     <meta property="product:price:currency" content="{$currency.iso_code}">
   {/if}
   {if isset($product.weight) && ($product.weight != 0)}
-  <meta property="product:weight:value" content="{$product.weight}">
-  <meta property="product:weight:units" content="{$product.weight_unit}">
+    <meta property="product:weight:value" content="{$product.weight}">
+    <meta property="product:weight:units" content="{$product.weight_unit}">
   {/if}
 {/block}
 
@@ -48,183 +52,132 @@
 
 {block name='content'}
 
-  <section id="main">
+  <section id="mainproduct" class="product-page">
+
     <meta content="{$product.url}">
 
     <div class="row product-container js-product-container">
-      <div class="col-md-6">
-        {block name='page_content_container'}
-          <section class="page-content" id="content">
-            {block name='page_content'}
-              {include file='catalog/_partials/product-flags.tpl'}
-
-              {block name='product_cover_thumbnails'}
-                {include file='catalog/_partials/product-cover-thumbnails.tpl'}
-              {/block}
-              <div class="scroll-box-arrows">
-                <i class="material-icons left">&#xE314;</i>
-                <i class="material-icons right">&#xE315;</i>
-              </div>
-
-            {/block}
-          </section>
-        {/block}
-        </div>
-        <div class="col-md-6">
-          {block name='page_header_container'}
-            {block name='page_header'}
-              <h1 class="h1">{block name='page_title'}{$product.name}{/block}</h1>
-            {/block}
-          {/block}
-          {block name='product_prices'}
-            {include file='catalog/_partials/product-prices.tpl'}
-          {/block}
-
-          <div class="product-information">
-            {block name='product_description_short'}
-              <div id="product-description-short-{$product.id}" class="product-description">{$product.description_short nofilter}</div>
-            {/block}
-
-            {if $product.is_customizable && count($product.customizations.fields)}
-              {block name='product_customization'}
-                {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
-              {/block}
-            {/if}
-
-            <div class="product-actions js-product-actions">
-              {block name='product_buy'}
-                <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
-                  <input type="hidden" name="token" value="{$static_token}">
-                  <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
-                  <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id" class="js-product-customization-id">
-
-                  {block name='product_variants'}
-                    {include file='catalog/_partials/product-variants.tpl'}
-                  {/block}
-
-                  {block name='product_pack'}
-                    {if $packItems}
-                      <section class="product-pack">
-                        <p class="h4">{l s='This pack contains' d='Shop.Theme.Catalog'}</p>
-                        {foreach from=$packItems item="product_pack"}
-                          {block name='product_miniature'}
-                            {include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack showPackProductsPrice=$product.show_price}
-                          {/block}
-                        {/foreach}
-                    </section>
-                    {/if}
-                  {/block}
-
-                  {block name='product_discounts'}
-                    {include file='catalog/_partials/product-discounts.tpl'}
-                  {/block}
-
-                  {block name='product_add_to_cart'}
-                    {include file='catalog/_partials/product-add-to-cart.tpl'}
-                  {/block}
-
-                  {block name='product_additional_info'}
-                    {include file='catalog/_partials/product-additional-info.tpl'}
-                  {/block}
-
-                  {* Input to refresh product HTML removed, block kept for compatibility with themes *}
-                  {block name='product_refresh'}{/block}
-                </form>
-              {/block}
-
-            </div>
-
-            {block name='hook_display_reassurance'}
-              {hook h='displayReassurance'}
-            {/block}
-
-            {block name='product_tabs'}
-              <div class="tabs">
-                <ul class="nav nav-tabs" role="tablist">
-                  {if $product.description}
-                    <li class="nav-item">
-                       <a
-                         class="nav-link{if $product.description} active js-product-nav-active{/if}"
-                         data-toggle="tab"
-                         href="#description"
-                         role="tab"
-                         aria-controls="description"
-                         {if $product.description} aria-selected="true"{/if}>{l s='Description' d='Shop.Theme.Catalog'}</a>
-                    </li>
-                  {/if}
-                  <li class="nav-item">
-                    <a
-                      class="nav-link{if !$product.description} active js-product-nav-active{/if}"
-                      data-toggle="tab"
-                      href="#product-details"
-                      role="tab"
-                      aria-controls="product-details"
-                      {if !$product.description} aria-selected="true"{/if}>{l s='Product Details' d='Shop.Theme.Catalog'}</a>
-                  </li>
-                  {if $product.attachments}
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        data-toggle="tab"
-                        href="#attachments"
-                        role="tab"
-                        aria-controls="attachments">{l s='Attachments' d='Shop.Theme.Catalog'}</a>
-                    </li>
-                  {/if}
-                  {foreach from=$product.extraContent item=extra key=extraKey}
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        data-toggle="tab"
-                        href="#extra-{$extraKey}"
-                        role="tab"
-                        aria-controls="extra-{$extraKey}">{$extra.title}</a>
-                    </li>
-                  {/foreach}
-                </ul>
-
-                <div class="tab-content" id="tab-content">
-                 <div class="tab-pane fade in{if $product.description} active js-product-tab-active{/if}" id="description" role="tabpanel">
-                   {block name='product_description'}
-                     <div class="product-description">{$product.description nofilter}</div>
-                   {/block}
-                 </div>
-
-                 {block name='product_details'}
-                   {include file='catalog/_partials/product-details.tpl'}
-                 {/block}
-
-                 {block name='product_attachments'}
-                   {if $product.attachments}
-                    <div class="tab-pane fade in" id="attachments" role="tabpanel">
-                       <section class="product-attachments">
-                         <p class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</p>
-                         {foreach from=$product.attachments item=attachment}
-                           <div class="attachment">
-                             <h4><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a></h4>
-                             <p>{$attachment.description}</p>
-                             <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                               {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
-                             </a>
-                           </div>
-                         {/foreach}
-                       </section>
-                     </div>
-                   {/if}
-                 {/block}
-
-                 {foreach from=$product.extraContent item=extra key=extraKey}
-                 <div class="tab-pane fade in {$extra.attr.class}" id="extra-{$extraKey}" role="tabpanel" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
-                   {$extra.content nofilter}
-                 </div>
-                 {/foreach}
-              </div>
-            </div>
-          {/block}
-        </div>
+      
+      <!-- Sekcja Kategorii (Sidebar) -->
+      <div class="col-lg-3 col-md-4 col-sm-12 categories-sidebar-vertical">
+        {hook h='displayLeftColumn'}
       </div>
-    </div>
 
+
+<!-- Sekcja Zdjęć Produktu -->
+<div class="col-lg-6 col-md-4 col-sm-12">
+  {block name='page_content_container'}
+    <section class="page-content" id="content">
+      {block name='page_content'}
+        {include file='catalog/_partials/product-flags.tpl'}
+
+        {block name='product_cover_thumbnails'}
+          {include file='catalog/_partials/product-cover-thumbnails.tpl'}
+        {/block}
+        <div class="scroll-box-arrows">
+          <i class="material-icons left">&#xE314;</i>
+          <i class="material-icons right">&#xE315;</i>
+        </div>
+      {/block}
+    </section>
+  {/block}
+
+
+
+              
+{block name='product_tabs'}
+  <div class="product-description-section">
+    <h1 class="product-title">{$product.name}</h1>
+    <div class="product-details">
+      {$product.description nofilter}
+    </div>
+  </div>
+{/block}
+
+
+
+</div>
+
+<div class="product-information">
+  <!-- Nagłówek i cena -->
+  <h1 class="product-title">{$product.name}</h1>
+  <div class="price-summary">
+  </div>
+
+  <div class="additional-info">
+    <p><strong>Obserwuj produkt:</strong> 
+      <a href="#" class="watch-product">
+        <i class="material-icons">favorite</i>
+      </a>
+    </p>
+    <p><strong>Dodaj recenzję:</strong> 
+      <span class="star-rating">
+        <i class="material-icons star">star</i>
+        <i class="material-icons star">star</i>
+        <i class="material-icons star">star</i>
+        <i class="material-icons star">star</i>
+        <i class="material-icons star">star</i>
+      </span>
+    </p>
+    <p><strong>Kod produktu:</strong> {if is_string($product.reference)}{$product.reference}{else}N/A{/if}</p>
+    <p><strong>Producent:</strong>
+      {if is_string($product.manufacturer_name)}
+        {$product.manufacturer_name}
+      {else}
+        N/A
+      {/if}
+    </p>
+    <p><strong>Dostępność:</strong> 
+      {if $product.quantity > 0}
+        ({$product.quantity} szt.)
+      {else}
+        <span class="text-danger">Brak</span>
+      {/if}
+    </p>
+  </div>
+
+  
+{block name='product_prices'}
+  <div class="custom-price-wrapper">
+    {include file='catalog/_partials/product-prices.tpl'}
+  </div>
+{/block}
+
+
+
+  <!-- Przycisk "Dodaj do koszyka" -->
+<div class="product-actions js-product-actions">
+  {block name='product_buy'}
+    <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
+      <input type="hidden" name="token" value="{$static_token}">
+      <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
+      <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id" class="js-product-customization-id">
+
+      {block name='product_variants'}
+        {include file='catalog/_partials/product-variants.tpl'}
+      {/block}
+
+      <!-- Kontener na manipulację ilością i przycisk -->
+      <div class="quantity-add-to-cart-container">
+        <div class="quantity-wrapper">
+          
+          <input id="quantity_wanted" class="js-quantity-product" type="number" value="1" min="1" name="qty">
+          
+        </div>
+
+        <button type="submit" data-button-action = "add-to-cart" class="btn btn-primary btn-add-to-cart">
+          
+          <i class="material-icons">shopping_cart</i>
+          Dodaj do koszyka
+        </button>
+      </div>
+    </form>
+  {/block}
+</div>
+
+</div>
+
+    <!-- Sekcja Akcesoriów, Stopki itd. -->
     {block name='product_accessories'}
       {if $accessories}
         <section class="product-accessories clearfix">
@@ -251,10 +204,12 @@
     {block name='page_footer_container'}
       <footer class="page-footer">
         {block name='page_footer'}
-          <!-- Footer content -->
+          <!-- Zawartość stopki -->
         {/block}
       </footer>
     {/block}
   </section>
+
+
 
 {/block}

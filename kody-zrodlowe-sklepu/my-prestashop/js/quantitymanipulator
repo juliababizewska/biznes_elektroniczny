@@ -1,0 +1,21 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const decreaseButtons = document.querySelectorAll(".js-decrease-quantity");
+    const increaseButtons = document.querySelectorAll(".js-increase-quantity");
+    const quantityInput = document.querySelector("#quantity_wanted");
+
+    decreaseButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value, 10) || 1;
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+    });
+
+    increaseButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            let currentValue = parseInt(quantityInput.value, 10) || 1;
+            quantityInput.value = currentValue + 1;
+        });
+    });
+});

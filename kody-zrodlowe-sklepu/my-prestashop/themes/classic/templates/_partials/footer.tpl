@@ -22,35 +22,30 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div class="container">
-  <div class="row">
-    {block name='hook_footer_before'}
-      {hook h='displayFooterBefore'}
-    {/block}
+<div class="newsletter-section-wrapper">
+         {hook h='displayFooterBefore'}
   </div>
-</div>
-<div class="footer-container">
-  <div class="container">
-    <div class="row">
-      {block name='hook_footer'}
-        {hook h='displayFooter'}
-      {/block}
-    </div>
-    <div class="row">
-      {block name='hook_footer_after'}
-        {hook h='displayFooterAfter'}
-      {/block}
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="text-sm-center">
-          {block name='copyright_link'}
-            <a href="https://www.prestashop.com" target="_blank" rel="noopener noreferrer nofollow">
-              {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
-            </a>
-          {/block}
-        </p>
+
+  <!-- Stopka -->
+  <footer class="footer-container">
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>Informacje</h3>
+        <ul>
+          <li><a href="https://localhost:8080/pl/content/4-o-firmie">O firmie</a></li>
+          <li><a href="https://localhost:8080/pl/content/2-regulamin">Regulamin</a></li>
+          <li><a href="https://localhost:8080/pl/content/1-kontakt-informacja-ktorych-mozesz-szukac">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Social media</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/p/fastrygapl-100063697616320/?locale=pl_PL">Facebook</a></li>
+        </ul>
       </div>
     </div>
-  </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 PG. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
 </div>
