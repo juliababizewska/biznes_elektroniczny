@@ -86,10 +86,10 @@
       <a href="https://localhost:8080/pl/szukaj?s=lammy" class="producer-item">
         <img src="{$urls.base_url}themes/classic/assets/img/lammy.jpg" alt="Lammy">
       </a>
-      <a href="link-do-producenta-3" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=lopi" class="producer-item">
         <img src="{$urls.base_url}themes/classic/assets/img/lopi.jpg" alt="Lopi">
       </a>
-      <a href="https://localhost:8080/pl/szukaj?s=lopi" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=Valeria" class="producer-item">
         <img src="{$urls.base_url}themes/classic/assets/img/valeria.png" alt="Valeria Lanas">
       </a>
       <a href="https://localhost:8080/pl/szukaj?s=sesia" class="producer-item">
@@ -169,29 +169,48 @@
 
 <div class="info-box-wrapper">
   <div class="info-box">
+   <a href="https://localhost:8080/pl/content/8-informacje">
     <img src="{$urls.base_url}themes/classic/assets/img/Info.png" alt="Informacje">
     <p>informacje jak pracujemy,<br> nasze telefony, adresy, numery kont,<br> program rabatowy</p>
+  </a>
   </div>
   <div class="info-box">
+    <a href="https://localhost:8080/pl/content/9-koszty-dostawy">
     <img src="{$urls.base_url}themes/classic/assets/img/amazonboy.png" alt="Koszty dostawy">
     <p>Koszty dostawy<br> zamówionych produktów</p>
+    </a>
   </div>
   <div class="info-box">
+    <a href="https://www.facebook.com/p/fastrygapl-100063697616320/?locale=pl_PL">
     <img src="{$urls.base_url}themes/classic/assets/img/fb.jpg" alt="Facebook">
     <p>Tutaj znajdziesz najświeższe nowości i ciekawe informacje.</p>
+    </a>
   </div>
 <div class="info-box warehouse-box">
+<a href="https://localhost:8080/pl/content/10-hurtownia"> 
   <img src="{$urls.base_url}themes/classic/assets/img/W.jpg" alt="Hurtownia">
   <p><strong>Hurtownia</strong></p>
+  </a>
 </div>
 </div>
 
+<!--przyciski do zrobienia  -->
 <div class="button-wrapper">
+  <a href="https://localhost:8080/pl/content/2-regulamin">
   <button class="custom-button">Regulamin</button>
+  </a>
+  <a href="https://localhost:8080/pl/content/2-regulamin">
   <button class="custom-button">Polityka prywatności</button>
+  </a>
+  <a href="https://localhost:8080/pl/content/2-regulamin">
   <button class="custom-button">Koszty dostawy</button>
+  </a>
+  <a href="https://localhost:8080/pl/content/6-formularz-zwrotu">
   <button class="custom-button">Formularz zwrotu produktów</button>
+  </a>
+  <a href="https://localhost:8080/pl/content/7-zwroty-reklamacje">
   <button class="custom-button">Zwroty reklamacje</button>
+  </a>
 </div>
 
 

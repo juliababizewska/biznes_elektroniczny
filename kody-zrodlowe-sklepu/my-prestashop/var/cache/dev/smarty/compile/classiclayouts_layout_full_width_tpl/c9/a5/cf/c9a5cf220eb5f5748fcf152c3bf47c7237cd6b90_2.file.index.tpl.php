@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-01 03:35:38
+/* Smarty version 3.1.48, created on 2024-12-01 17:10:02
   from '/var/www/html/themes/classic/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674bcb7a296a45_40240094',
+  'unifunc' => 'content_674c8a5a7cb6b5_47952417',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c9a5cf220eb5f5748fcf152c3bf47c7237cd6b90' => 
     array (
       0 => '/var/www/html/themes/classic/templates/index.tpl',
-      1 => 1733014214,
+      1 => 1733063244,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674bcb7a296a45_40240094 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674c8a5a7cb6b5_47952417 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1530115170674bcb7a291f05_12830552', 'page_content_container');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1942447994674c8a5a7c6b56_93631701', 'page_content_container');
 ?>
 
 
@@ -35,14 +35,14 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1530115170674bcb7a
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, 'page.tpl');
 }
 /* {block 'page_content_top'} */
-class Block_1892168267674bcb7a2921c3_71943636 extends Smarty_Internal_Block
+class Block_1468448510674c8a5a7c6e50_78937407 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 }
 /* {/block 'page_content_top'} */
 /* {block 'hook_home'} */
-class Block_1977513636674bcb7a292817_92399264 extends Smarty_Internal_Block
+class Block_1606130911674c8a5a7c7591_67599079 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -66,13 +66,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'hook_home'} */
 /* {block 'page_content'} */
-class Block_506562043674bcb7a2925f4_82662647 extends Smarty_Internal_Block
+class Block_1745644235674c8a5a7c7328_47158790 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
       <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1977513636674bcb7a292817_92399264', 'hook_home', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1606130911674c8a5a7c7591_67599079', 'hook_home', $this->tplIndex);
 ?>
 
 
@@ -126,11 +126,11 @@ themes/classic/assets/img/katia.png" alt="Katia">
         <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/lammy.jpg" alt="Lammy">
       </a>
-      <a href="link-do-producenta-3" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=lopi" class="producer-item">
         <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/lopi.jpg" alt="Lopi">
       </a>
-      <a href="https://localhost:8080/pl/szukaj?s=lopi" class="producer-item">
+      <a href="https://localhost:8080/pl/szukaj?s=Valeria" class="producer-item">
         <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/valeria.png" alt="Valeria Lanas">
       </a>
@@ -212,33 +212,52 @@ themes/classic/assets/img/sesia.jpg" alt="Sesia">
 
 <div class="info-box-wrapper">
   <div class="info-box">
+   <a href="https://localhost:8080/pl/content/8-informacje">
     <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/Info.png" alt="Informacje">
     <p>informacje jak pracujemy,<br> nasze telefony, adresy, numery kont,<br> program rabatowy</p>
+  </a>
   </div>
   <div class="info-box">
+    <a href="https://localhost:8080/pl/content/9-koszty-dostawy">
     <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/amazonboy.png" alt="Koszty dostawy">
     <p>Koszty dostawy<br> zamówionych produktów</p>
+    </a>
   </div>
   <div class="info-box">
+    <a href="https://www.facebook.com/p/fastrygapl-100063697616320/?locale=pl_PL">
     <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/fb.jpg" alt="Facebook">
     <p>Tutaj znajdziesz najświeższe nowości i ciekawe informacje.</p>
+    </a>
   </div>
 <div class="info-box warehouse-box">
+<a href="https://localhost:8080/pl/content/10-hurtownia"> 
   <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 themes/classic/assets/img/W.jpg" alt="Hurtownia">
   <p><strong>Hurtownia</strong></p>
+  </a>
 </div>
 </div>
 
+<!--przyciski do zrobienia  -->
 <div class="button-wrapper">
+  <a href="https://localhost:8080/pl/content/2-regulamin">
   <button class="custom-button">Regulamin</button>
+  </a>
+  <a href="https://localhost:8080/pl/content/2-regulamin">
   <button class="custom-button">Polityka prywatności</button>
+  </a>
+  <a href="https://localhost:8080/pl/content/2-regulamin">
   <button class="custom-button">Koszty dostawy</button>
+  </a>
+  <a href="https://localhost:8080/pl/content/6-formularz-zwrotu">
   <button class="custom-button">Formularz zwrotu produktów</button>
+  </a>
+  <a href="https://localhost:8080/pl/content/7-zwroty-reklamacje">
   <button class="custom-button">Zwroty reklamacje</button>
+  </a>
 </div>
 
 
@@ -249,24 +268,24 @@ themes/classic/assets/img/W.jpg" alt="Hurtownia">
 }
 /* {/block 'page_content'} */
 /* {block 'page_content_container'} */
-class Block_1530115170674bcb7a291f05_12830552 extends Smarty_Internal_Block
+class Block_1942447994674c8a5a7c6b56_93631701 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'page_content_container' => 
   array (
-    0 => 'Block_1530115170674bcb7a291f05_12830552',
+    0 => 'Block_1942447994674c8a5a7c6b56_93631701',
   ),
   'page_content_top' => 
   array (
-    0 => 'Block_1892168267674bcb7a2921c3_71943636',
+    0 => 'Block_1468448510674c8a5a7c6e50_78937407',
   ),
   'page_content' => 
   array (
-    0 => 'Block_506562043674bcb7a2925f4_82662647',
+    0 => 'Block_1745644235674c8a5a7c7328_47158790',
   ),
   'hook_home' => 
   array (
-    0 => 'Block_1977513636674bcb7a292817_92399264',
+    0 => 'Block_1606130911674c8a5a7c7591_67599079',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -274,12 +293,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
   <section id="content" class="page-home">
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1892168267674bcb7a2921c3_71943636', 'page_content_top', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1468448510674c8a5a7c6e50_78937407', 'page_content_top', $this->tplIndex);
 ?>
 
 
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_506562043674bcb7a2925f4_82662647', 'page_content', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1745644235674c8a5a7c7328_47158790', 'page_content', $this->tplIndex);
 ?>
 
   </section>

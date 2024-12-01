@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-01 03:35:38
+/* Smarty version 3.1.48, created on 2024-12-01 17:10:02
   from '/var/www/html/themes/classic/templates/_partials/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674bcb7a350970_97926900',
+  'unifunc' => 'content_674c8a5a866f80_58934169',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '00de71589090397295d207f2915f6624faaf939a' => 
     array (
       0 => '/var/www/html/themes/classic/templates/_partials/footer.tpl',
-      1 => 1732988028,
+      1 => 1733068501,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674bcb7a350970_97926900 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674c8a5a866f80_58934169 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="newsletter-section-wrapper">
-  <!-- Tło całej sekcji -->
-  <div class="newsletter-section">
-    <!-- Niebieski box -->
-    <div class="newsletter-content">
-      <div class="newsletter-text">
-        <h2>Dołącz do naszego klubu.</h2>
-        <p>Dołącz do naszego klubu i otrzymuj ciekawe informacje, promocje i rabaty.</p>
-      </div>
-      <!-- Formularz z poprawnym action -->
-      <form class="newsletter-form" action="https://localhost:8080/pl/#blockEmailSubscription_displayFooterBefore" method="post">
-        <input type="email" name="email" placeholder="Twój email..." required>
-        <button type="submit" class="newsletter-btn">Dodaj</button>
-      </form>
-    </div>
+         <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayFooterBefore'),$_smarty_tpl ) );?>
+
   </div>
 
   <!-- Stopka -->
@@ -44,17 +32,15 @@ function content_674bcb7a350970_97926900 (Smarty_Internal_Template $_smarty_tpl)
       <div class="footer-column">
         <h3>Informacje</h3>
         <ul>
-          <li><a href="#">O firmie</a></li>
-          <li><a href="#">Regulamin</a></li>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Ustawienia cookies</a></li>
+          <li><a href="https://localhost:8080/pl/content/4-o-firmie">O firmie</a></li>
+          <li><a href="https://localhost:8080/pl/content/2-regulamin">Regulamin</a></li>
+          <li><a href="https://localhost:8080/pl/content/1-kontakt-informacja-ktorych-mozesz-szukac">Kontakt</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h3>Social media</h3>
         <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Newsletter</a></li>
+          <li><a href="https://www.facebook.com/p/fastrygapl-100063697616320/?locale=pl_PL">Facebook</a></li>
         </ul>
       </div>
     </div>

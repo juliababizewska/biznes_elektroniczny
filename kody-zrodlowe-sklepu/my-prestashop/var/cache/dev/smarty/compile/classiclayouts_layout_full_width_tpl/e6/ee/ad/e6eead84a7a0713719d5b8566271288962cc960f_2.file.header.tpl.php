@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-01 03:35:38
+/* Smarty version 3.1.48, created on 2024-12-01 17:10:02
   from '/var/www/html/themes/classic/templates/_partials/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674bcb7a310988_74483919',
+  'unifunc' => 'content_674c8a5a844026_03499907',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6eead84a7a0713719d5b8566271288962cc960f' => 
     array (
       0 => '/var/www/html/themes/classic/templates/_partials/header.tpl',
-      1 => 1733020522,
+      1 => 1733066520,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674bcb7a310988_74483919 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674c8a5a844026_03499907 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header class="custom-header" id="main-header">
   <div class="header-container">
     <!-- Zdjęcie logo -->
@@ -60,10 +60,8 @@ themes/classic/assets/img/logo.jpeg" alt="Logo" class="logo-image">
 
       <!-- Koszyk -->
       <div class="header-item" id="cart-item">
-        <a href="https://localhost:8080/pl/koszyk?action=show">
-          <span>Koszyk</span>
-          <i class="material-icons">shopping_cart</i>
-        </a>
+           <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayCartModalContent'),$_smarty_tpl ) );?>
+    
       </div>
 
       <!-- Język i waluta -->

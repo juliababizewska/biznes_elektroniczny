@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-01 03:35:38
+/* Smarty version 3.1.48, created on 2024-12-01 17:09:51
   from 'module:paypalviewstemplatesfront' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674bcb7a0af310_66128022',
+  'unifunc' => 'content_674c8a4fb82be8_39497759',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1fb5b414db934f3cbce1f81a5328eb449f2525ce' => 
     array (
       0 => 'module:paypalviewstemplatesfront',
-      1 => 1732566900,
+      1 => 1732894891,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674bcb7a0af310_66128022 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674c8a4fb82be8_39497759 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /var/www/html/modules/paypal/views/templates/front/prefetch.tpl -->
 <?php if ((isset($_smarty_tpl->tpl_vars['resources']->value)) && is_array($_smarty_tpl->tpl_vars['resources']->value) && empty($_smarty_tpl->tpl_vars['resources']->value) == false) {?>
     <?php

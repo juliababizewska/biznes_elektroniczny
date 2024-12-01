@@ -23,20 +23,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 <div class="newsletter-section-wrapper">
-  <!-- Tło całej sekcji -->
-  <div class="newsletter-section">
-    <!-- Niebieski box -->
-    <div class="newsletter-content">
-      <div class="newsletter-text">
-        <h2>Dołącz do naszego klubu.</h2>
-        <p>Dołącz do naszego klubu i otrzymuj ciekawe informacje, promocje i rabaty.</p>
-      </div>
-      <!-- Formularz z poprawnym action -->
-      <form class="newsletter-form" action="https://localhost:8080/pl/#blockEmailSubscription_displayFooterBefore" method="post">
-        <input type="email" name="email" placeholder="Twój email..." required>
-        <button type="submit" class="newsletter-btn">Dodaj</button>
-      </form>
-    </div>
+         {hook h='displayFooterBefore'}
   </div>
 
   <!-- Stopka -->
@@ -45,17 +32,15 @@
       <div class="footer-column">
         <h3>Informacje</h3>
         <ul>
-          <li><a href="#">O firmie</a></li>
-          <li><a href="#">Regulamin</a></li>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Ustawienia cookies</a></li>
+          <li><a href="https://localhost:8080/pl/content/4-o-firmie">O firmie</a></li>
+          <li><a href="https://localhost:8080/pl/content/2-regulamin">Regulamin</a></li>
+          <li><a href="https://localhost:8080/pl/content/1-kontakt-informacja-ktorych-mozesz-szukac">Kontakt</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h3>Social media</h3>
         <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Newsletter</a></li>
+          <li><a href="https://www.facebook.com/p/fastrygapl-100063697616320/?locale=pl_PL">Facebook</a></li>
         </ul>
       </div>
     </div>

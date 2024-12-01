@@ -96,19 +96,6 @@
 
 
 
-  <!-- Nowa sekcja: Komentarze i Recenzje -->
-<section id="product-comments-reviews">
-  <div class="reviews-section">
-    <h2>Recenzje</h2>
-    <p>Produkt nie posiada recenzji. <a href="#" class="add-review-link">Dodaj recenzję</a></p>
-  </div>
-  <div class="questions-section">
-    <h2>Pytania do produktu</h2>
-    <p>Zadaj pytanie dotyczące produktu. Nasz zespół z przyjemnością udzieli szczegółowej odpowiedzi na zapytanie.</p>
-    <button type="button" class="ask-question-btn">Zadaj pytanie</button>
-  </div>
-</section>
-
 </div>
 
 <div class="product-information">

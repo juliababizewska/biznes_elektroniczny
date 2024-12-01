@@ -34,10 +34,7 @@
 
       <!-- Koszyk -->
       <div class="header-item" id="cart-item">
-        <a href="https://localhost:8080/pl/koszyk?action=show">
-          <span>Koszyk</span>
-          <i class="material-icons">shopping_cart</i>
-        </a>
+           {hook h='displayCartModalContent'}    
       </div>
 
       <!-- Język i waluta -->

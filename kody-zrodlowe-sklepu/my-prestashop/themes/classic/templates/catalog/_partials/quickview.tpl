@@ -61,6 +61,7 @@
 
                 {block name='product_add_to_cart'}
                   {include file='catalog/_partials/product-add-to-cart.tpl'}
+                  {hook h='displayCartModalContent' product=$product}
                 {/block}
 
                 {* Input to refresh product HTML removed, block kept for compatibility with themes *}

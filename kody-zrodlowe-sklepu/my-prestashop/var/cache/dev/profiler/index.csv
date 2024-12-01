@@ -1,5 +1,7 @@
-8cc8d5,172.18.0.1,GET,https://localhost:8080/admin123/index.php/configure/advanced/performance/?_token=JRoRhH9B6klT0np-sL-fY3-cNURSAAmyyKq_pIckP00,1733020534,,200
-ed3d76,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=JRoRhH9B6klT0np-sL-fY3-cNURSAAmyyKq_pIckP00&rand=1733020536243,1733020536,,200
-3a26ad,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=JRoRhH9B6klT0np-sL-fY3-cNURSAAmyyKq_pIckP00,1733020536,,200
-3fc9a9,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=JRoRhH9B6klT0np-sL-fY3-cNURSAAmyyKq_pIckP00&rand=1733020657099,1733020659,,200
-8f7617,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=JRoRhH9B6klT0np-sL-fY3-cNURSAAmyyKq_pIckP00,1733020659,,200
+65a9e7,172.18.0.1,GET,https://localhost:8080/admin123/index.php/configure/advanced/performance/?_token=qtqgkMUIqD9jz0-a2CfGEJRh928cNDLD_5l31WAKLF8,1733069388,,200
+4ed59b,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=qtqgkMUIqD9jz0-a2CfGEJRh928cNDLD_5l31WAKLF8&rand=1733069389021,1733069389,,200
+b2be54,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=qtqgkMUIqD9jz0-a2CfGEJRh928cNDLD_5l31WAKLF8,1733069389,,200
+295370,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=qtqgkMUIqD9jz0-a2CfGEJRh928cNDLD_5l31WAKLF8&rand=1733069433420,1733069434,,200
+50a099,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=qtqgkMUIqD9jz0-a2CfGEJRh928cNDLD_5l31WAKLF8&rand=1733069433421,1733069434,,200
+b02f0c,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=qtqgkMUIqD9jz0-a2CfGEJRh928cNDLD_5l31WAKLF8&rand=1733069509241,1733069509,,200
+797261,172.18.0.1,POST,https://localhost:8080/admin123/index.php/common/notifications?_token=qtqgkMUIqD9jz0-a2CfGEJRh928cNDLD_5l31WAKLF8,1733069510,,200
