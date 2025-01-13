@@ -3,38 +3,12 @@ services:
   mysql:
     container_name: some-mysql
     image: mysql:5.7
-    volumes:
-      - ../kody-zrodlowe-sklepu/mysql-data:/var/lib/mysql
+    #volumes:
+      #- ../kody-zrodlowe-sklepu/mysql-data:/var/lib/mysql
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: admin
       MYSQL_DATABASE: prestashop
-    networks:
-      - prestashop_network
-  prestashop:
-    container_name: prestashop
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: prestashop/prestashop:1.7.8
-    restart: unless-stopped
-    depends_on:
-      - mysql
-    ports:
-      - 8080:80
-      #- 8443:443
-    volumes:
-      - ../kody-zrodlowe-sklepu/my-prestashop:/var/www/html
-      #- ./000-default.conf:/etc/apache2/sites-enabled/000-default.conf
-      #- ./certs/ssl_certificate.crt:/etc/ssl/certs/ssl_certificate.crt
-      #- ./certs/ssl_certificate_secret.key:/etc/ssl/private/ssl_certificate_secret.key
-    environment:
-      DB_SERVER: some-mysql
-      DB_NAME: prestashop
-      DB_USER: root
-      DB_PASSWD: admin
-      PS_INSTALL_AUTO: 0
-      PS_DOMAIN: localhost:8080
     networks:
       - prestashop_network
   phpmyadmin:
@@ -50,21 +24,8 @@ services:
       MYSQL_ROOT_PASSWORD: admin
     networks:
       - prestashop_network
-  smtp:
-    image: namshi/smtp
-    container_name: smtp-server
-    networks:
-      - prestashop_network
-    ports:
-      - "25:25"
-      - "587:587"
-    environment:
-      - MAILDOMAIN=localhost
-      - SMTPUSER=root:admin
-    hostname: smtp.local
-    extra_hosts:
-      - "localhost:172.20.0.1"
 networks:
   prestashop_network:
-volumes:
-  mysql-data:
+    driver: bridge
+#volumes:
+ # mysql-data:
