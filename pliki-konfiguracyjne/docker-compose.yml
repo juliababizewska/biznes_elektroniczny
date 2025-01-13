@@ -1,31 +1,42 @@
 version: '3'
 services:
-  mysql:
-    container_name: some-mysql
-    image: mysql:5.7
-    #volumes:
-      #- ../kody-zrodlowe-sklepu/mysql-data:/var/lib/mysql
+  prestashop:
+    container_name: 193206prestashop
+    image: wderwisz/be_193206:1.0.3
     restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: prestashop
-    networks:
-      - prestashop_network
-  phpmyadmin:
-    container_name: phpmyadmin
-    image: phpmyadmin/phpmyadmin
-    restart: unless-stopped
-    depends_on:
-      - mysql
     ports:
-      - 8081:80
+      - 19320:80
+      #- 8443:443
     environment:
-      PMA_HOST: some-mysql
-      MYSQL_ROOT_PASSWORD: admin
+        DB_SERVER: admin-mysql_db
+        DB_NAME: BE_193206
+        DB_USER: root
+        DB_PASSWD: student
+        PS_INSTALL_AUTO: 0
+    command: >
+        sh -c "
+        until mysql -hadmin-mysql_db -uroot -pstudent -e 'SELECT 1'; do
+          echo 'Waiting for MySQL...';
+          sleep 5;
+        done;
+        mysql -hadmin-mysql_db -uroot -pstudent -e 'CREATE DATABASE IF NOT EXISTS BE_193206;';
+        mysql -hadmin-mysql_db -uroot -pstudent BE_193206 < /docker-entrypoint-initdb.d/db-dump.sql;
+        sed -i \"s/'database_name'.*=>.*/'database_name' => 'BE_193206',/\" /var/www/html/app/config/parameters.php;
+        sed -i \"s/'database_host'.*=>.*/'database_host' => 'admin-mysql_db',/\" /var/www/html/app/config/parameters.php;
+        sed -i \"s/'database_user'.*=>.*/'database_user' => 'root',/\" /var/www/html/app/config/parameters.php;
+        sed -i \"s/'database_password'.*=>.*/'database_password' => 'student',/\" /var/www/html/app/config/parameters.php;
+        chmod -R 777 var/www/html/modules;
+        chmod -R 777 /var/www/html/var;
+        rm -r /var/www/html/install;
+        apache2-foreground"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0' # Maksymalnie 1 vCore
+          memory: 512M # Maksymalnie 512 MB pamięci RAM
     networks:
-      - prestashop_network
+      - admin-mysql_default
+    
 networks:
-  prestashop_network:
-    driver: bridge
-#volumes:
- # mysql-data:
+  admin-mysql_default:
+    external: true
